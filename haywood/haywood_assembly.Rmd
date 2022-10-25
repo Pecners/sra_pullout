@@ -1,0 +1,226 @@
+---
+title: "School Breakdown for State Legislators"
+subtitle: "Kalan Haywood—Assembly District 16"
+logo: logo.png
+toc: true
+output: 
+  pdf_document:
+    includes:
+      in_header: header.tex
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(cityforwardcollective)
+library(knitr)
+library(kableExtra)
+library(RColorBrewer)
+library(scales)
+library(wisconsink12)
+library(sf) 
+library(showtext)
+
+font_add("Georgia", "/Library/Fonts/Georgia.ttf")
+font_add("Verdana", "/Library/Fonts/Supplemental/Verdana.ttf")
+showtext_auto()
+
+assembly <- st_read("../../Shapefiles/Wisconsin_Assembly_Districts_(2022)/Wisconsin_Assembly_Districts_(2022).shp")
+ass_percs <- read_rds("../../strategic_regional_analysis/data/ass_perc.rds")
+
+ass_lims <- ass_percs |> 
+  filter(ass_in_city > .1)
+
+geo_schools <- read_csv("../../000_data_temp/geocoded_mke_schools.csv") %>%
+  select(-student_count) %>%
+  st_as_sf(., coords = c("long", "lat"), crs = 4326) %>%
+  left_join(., make_mke_schools() %>%
+              filter(school_year == "2020-21") %>%
+              select(dpi_true_id, school_name)) %>%
+  left_join(., make_mke_rc() %>%
+              filter(school_year == "2020-21") %>%
+              select(-c(school_year, school_name))) %>%
+  mutate(grade_band = case_when(dpi_true_id == "3619_0454" ~ "6-12",
+                                dpi_true_id == "3619_0215" ~ "6-8",
+                                dpi_true_id == "3619_0115" ~ "K-5",
+                                dpi_true_id == "3619_1141" ~ "K-5",
+                                dpi_true_id == "3619_0149" ~ "K-5",
+                                TRUE ~ grade_band)) |> 
+  st_transform(crs = st_crs(assembly))
+
+assembly |> 
+  ggplot() +
+  geom_sf(size = .5, fill = "#C5050C", color = "white") +
+  theme_void()
+
+city_limits <- st_read("../../Shapefiles/Milwaukee/City Limits/citylimit.shp") |> 
+  st_transform(crs = st_crs(assembly))
+
+city_ass <- st_intersection(assembly, city_limits)
+
+mke_ass <- assembly |> 
+  filter(ASM2021 %in% ass_lims$ASM2021)
+
+ass_with_reps <- mke_ass |> 
+  mutate(rep = case_when(ASM2021 == 11 ~ "Drake",
+                         ASM2021 == 16 ~ "Haywood",
+                         ASM2021 %in% c(16, 17, 18) ~ "Johnson",
+                         TRUE ~ ""))
+
+make_data <- function(ass) {
+
+  o <- assembly %>%
+    filter(ASM2021 %in% ass)
+  
+  hq_definition <- c(6, # Exceeds
+                     7) # Significantly Exceeds
+  
+  
+  schools_in_zip <- st_intersection(geo_schools, o) %>%
+   left_join(., enrollment %>%
+                filter(group_by_value == "All Students")) %>%
+    left_join(., choice_counts %>% select(-school_name), by = c("school_year", "dpi_true_id")) %>%
+    mutate(clean_enr_20_21 = case_when(is.na(MPCP_count) ~ student_count,
+                                       !is.na(MPCP_count) ~ (MPCP_count + replace_na(SNSP_count, 0)),
+                                       TRUE ~ 9999),
+           clean_rating = str_remove(overall_rating, "\\^$"),
+           clean_rating = factor(clean_rating, levels = c("No Rating",
+                                                          "Fails to Meet Expectations",
+                                                          "Meets Few Expectations",
+                                                          "Meets Expectations",
+                                                          "Exceeds Expectations",
+                                                          "Significantly Exceeds Expectations")),
+           clean_rating = replace_na(clean_rating, "No Rating"),
+           meets = case_when(as.numeric(clean_rating) %in% hq_definition ~ "Meeting Expectations",
+                             TRUE ~ "Not Meeting Expectations"))
+  
+  clean_rated <- schools_in_zip %>%
+   as_tibble() 
+  
+  c <- clean_rated %>%
+    mutate(clean_rating = factor(clean_rating, levels = c("No Rating",
+                                                          "Fails to Meet Expectations",
+                                                          "Meets Few Expectations",
+                                                          "Meets Expectations",
+                                                          "Exceeds Expectations",
+                                                          "Significantly Exceeds Expectations")),
+           clean_rating = replace_na(clean_rating, replace = "No Rating"),
+           meets = case_when(as.numeric(clean_rating) %in% hq_definition ~ "High Quality",
+                             TRUE ~ "Not High Quality")) %>%
+    group_by(clean_rating, meets) %>%
+    summarise(enr = sum(clean_enr_20_21)) %>%
+    ungroup() %>%
+    arrange(clean_rating)
+
+  return(c)
+
+}
+
+
+# \hl{\textbf{`r nrow(data)`}}
+# 
+# \renewcommand{\arraystretch}{2}
+
+```
+
+\newpage
+# District 16 Overview
+
+\vspace{.25in}
+
+```{r fig.align='center', fig.height=8}
+ass_with_reps |> 
+  ggplot() +
+  geom_sf(fill = "grey95", color = "grey40", size = .1) +
+  geom_sf_text(aes(label = ASM2021), color = "grey70", size = 2) +
+  geom_sf(data = ass_with_reps |> filter(rep == "Haywood")) +
+  geom_sf_text(data = ass_with_reps |> filter(rep == "Haywood"),
+               aes(label = ASM2021), size = 4) +
+  geom_sf(data = city_limits, fill = NA, color = "red", size = .1) +
+  scale_alpha_identity() +
+  scale_color_identity() +
+  theme_void() +
+  theme(plot.title = element_text(family = "Georgia", hjust = .5,
+                                  margin = margin(20, 0,0,0)),
+        plot.title.position = "plot",
+        text = element_text(family = "Verdana", size = 12),
+        plot.caption = element_text(hjust = .5, color = "grey50",
+                                    margin = margin(b = 5), size = 8)) +
+  labs(title = "State Representative Kalan Haywood",
+       caption = "District boundaries reflect 2022 Assembly Districts")
+```
+
+\newpage
+
+```{r out.width="85%", fig.align='center'}
+c <- make_data(16) 
+
+enr_by_rc <- c |> 
+  ggplot(aes(clean_rating, enr)) +
+  geom_col(fill = cfc_darkblue, width = .5) +
+  geom_text(aes(label = comma(enr)), vjust = 1.25, color = "white", family = "serif") +
+  scale_y_continuous(labels = comma) +
+  scale_x_discrete(labels = function(x) str_wrap(x, 15)) +
+  labs(title = "Enrollment by Report Card Rating",
+       y = "Enrollment (2020-21 School Year)",
+       x = "Report Card Rating (2020-21 School Year)") +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0),
+        plot.caption.position = "plot")
+
+
+enr_by_quality <- c |> 
+    ggplot(aes(meets, enr)) +
+    geom_col(width = .5, fill = cfc_darkblue) +
+    geom_text(aes(label = comma(stat(y), 1)), color = "white", vjust = 1.25, 
+              stat = "summary", fun = sum, family = "serif") +
+    scale_x_discrete(labels = function(x) str_wrap(x, 10)) +
+    scale_y_continuous(labels = comma) +
+    labs(title = "Enrollment by School Quality",
+         y = "Enrollment (2020-21 School Year)",
+         x = "Report Card Rating (2020-21 School Year)",
+         caption = paste("High Quality includes 4-5 star schools.",
+                         "Not High Quality includes all other rated schools.",
+                         sep = "\n")) +
+    theme(panel.grid.minor = element_blank(),
+          panel.grid.major.x = element_blank(),
+          plot.title.position = "plot",
+          plot.caption = element_text(hjust = 0),
+          plot.caption.position = "plot")
+
+enr_by_rc
+```
+
+```{r out.width="85%", fig.align='center'}
+enr_by_quality
+```
+
+\newpage
+# List of Schools in District 16
+
+```{r}
+t <- ass_with_reps |> 
+  filter(rep == "Haywood") |> 
+  st_intersection(geo_schools) |> 
+  as_tibble() |> 
+  select(-c(overall_rating, overall_score)) |> 
+  left_join(make_mke_rc() |> 
+              filter(school_year == "2020-21") |> 
+              select(dpi_true_id,
+                     overall_rating, 
+                     overall_score)) |> 
+  select(school_name,
+         accurate_agency_type,
+         grade_band,
+         overall_rating,
+         overall_score) |> 
+  arrange(school_name)
+
+t |> 
+  kbl(booktabs = T, longtable = TRUE, caption = "School List with 2020-21 Report Cards",
+      col.names = c("School", "Sector", "Grades", "Report Card Rating", "Report Card Score")) |> 
+  kable_styling(latex_options = c("striped", "HOLD_position"), font_size = 8) |> 
+  column_spec(c(1,4), width = "10em")
+```
+
