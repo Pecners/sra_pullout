@@ -31,7 +31,15 @@ font_add("Georgia", "/Library/Fonts/Georgia.ttf")
 font_add("Verdana", "/Library/Fonts/Supplemental/Verdana.ttf")
 showtext_auto()
 
-assembly <- st_read("../../Shapefiles/Wisconsin_Assembly_Districts_(2022)/Wisconsin_Assembly_Districts_(2022).shp")
+cfc_comp_file <- "../shapefiles/WI_Assembly_Districts_2022/Wisconsin_Assembly_Districts_(2022).shp"
+
+if (file.exists(cfc_comp_file)) {
+  assembly <- st_read(cfc_comp_file)
+} else {
+  assembly <- st_read("../../shapefiles/Wisconsin_Assembly_Districts_(2022)/Wisconsin_Assembly_Districts_(2022).shp")
+
+}
+
 ass_percs <- read_rds("../../strategic_regional_analysis/data/ass_perc.rds")
 
 ass_lims <- ass_percs |> 

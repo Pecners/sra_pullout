@@ -1,12 +1,26 @@
 ---
 title: "School Breakdown for State Legislators"
-subtitle: "Kalan Haywood—Assembly District 16"
-logo: logo.png
+subtitle: "Dora Drake—Assembly District 11"
+mainfont: Verdana
+sansfont: Georgia
 toc: true
-output: 
-  pdf_document:
-    includes:
-      in_header: header.tex
+params:
+  district: 11
+  representative: "Dora Drake"
+knitr:
+  opts_chunk: 
+    R.options:
+      knitr.graphics.auto_pdf: true
+geometry:
+  - top=30mm
+  - left=1in
+  - right=1in
+  - bottom=30mm
+  - heightrounded
+format: 
+  pdf:
+    template-partials: 
+      - title.tex
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -24,7 +38,14 @@ font_add("Georgia", "/Library/Fonts/Georgia.ttf")
 font_add("Verdana", "/Library/Fonts/Supplemental/Verdana.ttf")
 showtext_auto()
 
-assembly <- st_read("../../Shapefiles/Wisconsin_Assembly_Districts_(2022)/Wisconsin_Assembly_Districts_(2022).shp")
+cfc_comp_file <- "../../shapefiles/WI_Assembly_Districts_2022/Wisconsin_Assembly_Districts_(2022).shp"
+
+if (file.exists(cfc_comp_file)) {
+  assembly <- st_read(cfc_comp_file)
+} else {
+  assembly <- st_read("../../shapefiles/Wisconsin_Assembly_Districts_(2022)/Wisconsin_Assembly_Districts_(2022).shp")
+}
+
 ass_percs <- read_rds("../../strategic_regional_analysis/data/ass_perc.rds")
 
 ass_lims <- ass_percs |> 
@@ -71,8 +92,8 @@ make_data <- function(ass) {
   o <- assembly %>%
     filter(ASM2021 %in% ass)
   
-  hq_definition <- c(6, # Exceeds
-                     7) # Significantly Exceeds
+  hq_definition <- c("Exceeds Expectations",
+                     "Significantly Exceeds Expectations") 
   
   
   schools_in_zip <- st_intersection(geo_schools, o) %>%
@@ -90,7 +111,7 @@ make_data <- function(ass) {
                                                           "Exceeds Expectations",
                                                           "Significantly Exceeds Expectations")),
            clean_rating = replace_na(clean_rating, "No Rating"),
-           meets = case_when(as.numeric(clean_rating) %in% hq_definition ~ "Meeting Expectations",
+           meets = case_when(clean_rating %in% hq_definition ~ "Meeting Expectations",
                              TRUE ~ "Not Meeting Expectations"))
   
   clean_rated <- schools_in_zip %>%
@@ -104,7 +125,7 @@ make_data <- function(ass) {
                                                           "Exceeds Expectations",
                                                           "Significantly Exceeds Expectations")),
            clean_rating = replace_na(clean_rating, replace = "No Rating"),
-           meets = case_when(as.numeric(clean_rating) %in% hq_definition ~ "High Quality",
+           meets = case_when(clean_rating %in% hq_definition ~ "High Quality",
                              TRUE ~ "Not High Quality")) %>%
     group_by(clean_rating, meets) %>%
     summarise(enr = sum(clean_enr_20_21)) %>%
@@ -123,17 +144,17 @@ make_data <- function(ass) {
 ```
 
 \newpage
-# District 16 Overview
+# District `r params$district` Overview
 
 \vspace{.25in}
 
-```{r fig.align='center', fig.height=8}
+```{r fig.align='center', fig.height=6.5}
 ass_with_reps |> 
   ggplot() +
   geom_sf(fill = "grey95", color = "grey40", size = .1) +
   geom_sf_text(aes(label = ASM2021), color = "grey70", size = 2) +
-  geom_sf(data = ass_with_reps |> filter(rep == "Haywood")) +
-  geom_sf_text(data = ass_with_reps |> filter(rep == "Haywood"),
+  geom_sf(data = ass_with_reps |> filter(rep == "Drake")) +
+  geom_sf_text(data = ass_with_reps |> filter(rep == "Drake"),
                aes(label = ASM2021), size = 4) +
   geom_sf(data = city_limits, fill = NA, color = "red", size = .1) +
   scale_alpha_identity() +
@@ -145,14 +166,19 @@ ass_with_reps |>
         text = element_text(family = "Verdana", size = 12),
         plot.caption = element_text(hjust = .5, color = "grey50",
                                     margin = margin(b = 5), size = 8)) +
-  labs(title = "State Representative Kalan Haywood",
+  labs(title = "State Representative Dora Drake",
        caption = "District boundaries reflect 2022 Assembly Districts")
 ```
 
 \newpage
 
-```{r out.width="85%", fig.align='center'}
-c <- make_data(16) 
+```{r}
+#| fig-align: center
+#| out-width: 90%
+
+
+
+c <- make_data(params$district) 
 
 enr_by_rc <- c |> 
   ggplot(aes(clean_rating, enr)) +
@@ -165,6 +191,8 @@ enr_by_rc <- c |>
        x = "Report Card Rating (2020-21 School Year)") +
   theme(panel.grid.minor = element_blank(),
         panel.grid.major.x = element_blank(),
+        axis.text.x = element_text(size = 8),
+        axis.title = element_text(size = 12),
         plot.title.position = "plot",
         plot.caption = element_text(hjust = 0),
         plot.caption.position = "plot")
@@ -185,23 +213,34 @@ enr_by_quality <- c |>
                          sep = "\n")) +
     theme(panel.grid.minor = element_blank(),
           panel.grid.major.x = element_blank(),
+          axis.title.y = element_text(size = 10),
+          axis.title.x = element_text(margin = margin(t = 10, b = 10)),
           plot.title.position = "plot",
-          plot.caption = element_text(hjust = 0),
+          plot.caption = element_text(hjust = 0, color = "grey50"),
           plot.caption.position = "plot")
 
 enr_by_rc
+
 ```
 
-```{r out.width="85%", fig.align='center'}
+\vspace{.5in}
+
+```{r}
+#| fig-align: center
+#| out-width: 90%
+#| fig-pos: "H"
+
 enr_by_quality
+
 ```
+
 
 \newpage
-# List of Schools in District 16
+# List of Schools in District 11
 
 ```{r}
 t <- ass_with_reps |> 
-  filter(rep == "Haywood") |> 
+  filter(rep == "Drake") |> 
   st_intersection(geo_schools) |> 
   as_tibble() |> 
   select(-c(overall_rating, overall_score)) |> 

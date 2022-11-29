@@ -1,0 +1,308 @@
+---
+title: "School Breakdown for State Legislators"
+subtitle: "`r glue::glue('{params$honorific} {params$representative}--District {params$district}')`"
+mainfont: Verdana
+sansfont: Georgia
+toc: true
+params:
+  district: 11
+  representative: "Dora Drake"
+  honorific: "Representative"
+knitr:
+  opts_chunk: 
+    R.options:
+      knitr.graphics.auto_pdf: true
+geometry:
+  - top=30mm
+  - left=1in
+  - right=1in
+  - bottom=30mm
+  - heightrounded
+format: 
+  pdf:
+    template-partials: 
+      - title.tex
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(cityforwardcollective)
+library(knitr)
+library(kableExtra)
+library(RColorBrewer)
+library(scales)
+library(wisconsink12)
+library(sf) 
+library(showtext)
+library(quarto)
+library(glue)
+
+
+font_add("Georgia", "/Library/Fonts/Georgia.ttf")
+font_add("Verdana", "/Library/Fonts/Supplemental/Verdana.ttf")
+showtext_auto()
+
+if (params$honorific == "Representative") {
+  ass_with_reps <- read_rds("../data/ass_with_reps.rda")
+} else {
+  ass_with_reps <- read_rds("../data/ass_with_sens.rda")
+
+}
+
+geo_schools <- read_csv("../../000_data_temp/geocoded_mke_schools.csv") %>%
+  select(-student_count) %>%
+  st_as_sf(., coords = c("long", "lat"), crs = 4326) %>%
+  left_join(., make_mke_schools() %>%
+              filter(school_year == "2021-22") %>%
+              select(dpi_true_id, school_name)) %>%
+  left_join(., make_mke_rc() %>%
+              filter(school_year == "2021-22") %>%
+              select(-c(school_year, school_name))) %>%
+  mutate(grade_band = case_when(dpi_true_id == "3619_0454" ~ "6-12",
+                                dpi_true_id == "3619_0215" ~ "6-8",
+                                dpi_true_id == "3619_0115" ~ "K-5",
+                                dpi_true_id == "3619_1141" ~ "K-5",
+                                dpi_true_id == "3619_0149" ~ "K-5",
+                                TRUE ~ grade_band)) |> 
+  st_transform(crs = st_crs(ass_with_reps))
+
+
+city_limits <- st_read("../../Shapefiles/Milwaukee/City Limits/citylimit.shp") |> 
+  st_transform(crs = st_crs(ass_with_reps))
+
+make_data <- function(ass) {
+  
+  if (params$honorific == "Representative") {
+
+  o <- ass_with_reps %>%
+    filter(ASM2021 %in% ass)
+  } else {
+      o <- ass_with_reps %>%
+    filter(SEN2021 %in% ass)
+  }
+  
+  hq_definition <- c("Exceeds Expectations",
+                     "Significantly Exceeds Expectations") 
+  
+  
+  schools_in_zip <- st_intersection(geo_schools, o) %>%
+    left_join(., enrollment %>%
+                filter(group_by_value == "All Students")) %>%
+    left_join(., choice_counts %>% select(-school_name), by = c("school_year", "dpi_true_id")) %>%
+    mutate(clean_enr_20_21 = case_when(is.na(MPCP_count) ~ student_count,
+                                       !is.na(MPCP_count) ~ (MPCP_count + replace_na(SNSP_count, 0)),
+                                       TRUE ~ 9999),
+           clean_rating = str_remove(overall_rating, "\\^$"),
+           clean_rating = factor(clean_rating, levels = c("No Rating",
+                                                          "Fails to Meet Expectations",
+                                                          "Meets Few Expectations",
+                                                          "Meets Expectations",
+                                                          "Exceeds Expectations",
+                                                          "Significantly Exceeds Expectations")),
+           clean_rating = replace_na(clean_rating, "No Rating"),
+           meets = case_when(clean_rating %in% hq_definition ~ "Meeting Expectations",
+                             TRUE ~ "Not Meeting Expectations"))
+  
+  clean_rated <- schools_in_zip %>%
+    as_tibble() 
+  
+  c <- clean_rated %>%
+    mutate(clean_rating = factor(clean_rating, levels = c("No Rating",
+                                                          "Fails to Meet Expectations",
+                                                          "Meets Few Expectations",
+                                                          "Meets Expectations",
+                                                          "Exceeds Expectations",
+                                                          "Significantly Exceeds Expectations")),
+           clean_rating = replace_na(clean_rating, replace = "No Rating"),
+           meets = case_when(clean_rating %in% hq_definition ~ "High Quality",
+                             TRUE ~ "Not High Quality")) %>%
+    group_by(clean_rating, meets) %>%
+    summarise(enr = sum(clean_enr_20_21)) %>%
+    ungroup() %>%
+    arrange(clean_rating)
+  
+  return(c)
+  
+}
+
+# \hl{\textbf{`r nrow(data)`}}
+# 
+# \renewcommand{\arraystretch}{2}
+
+```
+
+\newpage
+# District `r params$district` Overview
+
+\vspace{.25in}
+
+```{r fig.align='center', fig.height=6.5}
+
+if (params$honorific == "Representative") {
+  ass_with_reps |> 
+    ggplot() +
+    geom_sf(fill = "grey95", color = "grey40", size = .1) +
+    geom_sf_text(aes(label = ASM2021), color = "grey70", size = 2) +
+    geom_sf(data = ass_with_reps |> filter(ASM2021 == params$district)) +
+    geom_sf_text(data = ass_with_reps |> filter(ASM2021 == params$district),
+                 aes(label = ASM2021), size = 4) +
+    geom_sf(data = city_limits, fill = NA, color = "red", size = .1) +
+    scale_alpha_identity() +
+    scale_color_identity() +
+    theme_void() +
+    theme(plot.title = element_text(family = "Georgia", hjust = .5,
+                                    margin = margin(20, 0,0,0)),
+          plot.title.position = "plot",
+          text = element_text(family = "Verdana", size = 12),
+          plot.caption = element_text(hjust = .5, color = "grey50",
+                                      margin = margin(b = 5), size = 8)) +
+    labs(title = glue("{params$honorific} {params$representative}"),
+         caption = "District boundaries reflect 2022 Districts")
+} else {
+  tmp <- ass_with_reps |> 
+    group_by(SEN2021) |> 
+    summarise()
+  
+  tmp |> 
+    ggplot() +
+    geom_sf(fill = "grey95", color = "grey40", size = .1) +
+    geom_sf_text(aes(label = SEN2021), color = "grey70", size = 2) +
+    geom_sf(data = tmp |> filter(SEN2021 == params$district)) +
+    geom_sf_text(data = tmp |> filter(SEN2021 == params$district),
+                 aes(label = SEN2021), size = 4) +
+    geom_sf(data = city_limits, fill = NA, color = "red", size = .1) +
+    scale_alpha_identity() +
+    scale_color_identity() +
+    theme_void() +
+    theme(plot.title = element_text(family = "Georgia", hjust = .5,
+                                    margin = margin(20, 0,0,0)),
+          plot.title.position = "plot",
+          text = element_text(family = "Verdana", size = 12),
+          plot.caption = element_text(hjust = .5, color = "grey50",
+                                      margin = margin(b = 5), size = 8)) +
+    labs(title = glue("{params$honorific} {params$representative}"),
+         caption = "District boundaries reflect 2022 Districts")
+}
+
+```
+
+\newpage
+
+```{r}
+#| fig-align: center
+#| out-width: 90%
+
+
+
+c <- make_data(params$district) 
+
+enr_by_rc <- c |> 
+  ggplot(aes(clean_rating, enr)) +
+  geom_col(fill = cfc_darkblue, width = .5) +
+  geom_text(aes(label = comma(enr)), vjust = -.5, family = "Verdana") +
+  scale_y_continuous(labels = comma) +
+  scale_x_discrete(labels = function(x) str_wrap(x, 15)) +
+  coord_cartesian(clip = "off") +
+  labs(title = "Enrollment by Report Card Rating",
+       y = "Enrollment (2021-22 School Year)",
+       x = "Report Card Rating (2021-22 School Year)") +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        axis.text.x = element_text(size = 8),
+        axis.title = element_text(size = 12),
+        plot.title.position = "plot",
+        plot.title = element_text(margin = margin(b = 10)),
+        plot.caption = element_text(hjust = 0),
+        plot.caption.position = "plot")
+
+
+enr_by_quality <- c |> 
+    ggplot(aes(meets, enr)) +
+    geom_col(width = .5, fill = cfc_darkblue) +
+    geom_text(aes(label = comma(stat(y), 1)), vjust = -.25, 
+              stat = "summary", fun = sum, family = "Verdana") +
+    scale_x_discrete(labels = function(x) str_wrap(x, 10)) +
+    scale_y_continuous(labels = comma) +
+    coord_cartesian(clip = "off") +
+    labs(title = "Enrollment by School Quality",
+         y = "Enrollment (2021-22 School Year)",
+         x = "Report Card Rating (2021-22 School Year)",
+         caption = paste("High Quality includes 4-5 star schools.",
+                         "Not High Quality includes all other rated schools.",
+                         sep = "\n")) +
+    theme(panel.grid.minor = element_blank(),
+          panel.grid.major.x = element_blank(),
+          axis.title.y = element_text(size = 10),
+          axis.title.x = element_text(margin = margin(t = 10, b = 10)),
+          plot.title.position = "plot",
+          plot.title = element_text(margin = margin(b = 10)),
+          plot.caption = element_text(hjust = 0, color = "grey50"),
+          plot.caption.position = "plot")
+
+enr_by_rc
+
+```
+
+\vspace{.5in}
+
+```{r}
+#| fig-align: center
+#| out-width: 90%
+#| fig-pos: "H"
+
+enr_by_quality
+
+```
+
+
+\newpage
+# List of Schools in District `r params$district`
+
+```{r}
+
+if (params$honorific == "Representative") {
+  t <- ass_with_reps |> 
+    filter(ASM2021 == params$district) |> 
+    st_intersection(geo_schools) |> 
+    as_tibble() |> 
+    select(-c(overall_rating, overall_score)) |> 
+    left_join(make_mke_rc() |> 
+                filter(school_year == "2021-22") |> 
+                select(dpi_true_id,
+                       overall_rating, 
+                       overall_score)) |> 
+    select(school_name,
+           accurate_agency_type,
+           grade_band,
+           overall_rating,
+           overall_score) |> 
+    arrange(school_name)
+} else {
+  t <- ass_with_reps |> 
+    filter(SEN2021 == params$district) |> 
+    st_intersection(geo_schools) |> 
+    as_tibble() |> 
+    select(-c(overall_rating, overall_score)) |> 
+    left_join(make_mke_rc() |> 
+                filter(school_year == "2021-22") |> 
+                select(dpi_true_id,
+                       overall_rating, 
+                       overall_score)) |> 
+    select(school_name,
+           accurate_agency_type,
+           grade_band,
+           overall_rating,
+           overall_score) |> 
+    arrange(school_name)
+}
+
+
+
+t |> 
+  filter(!is.na(school_name)) |> 
+  kbl(booktabs = T, longtable = TRUE, caption = "School List with 2021-22 Report Cards",
+      col.names = c("School", "Sector", "Grades", "Report Card Rating", "Report Card Score")) |> 
+  kable_styling(latex_options = c("striped", "HOLD_position"), font_size = 8) |> 
+  column_spec(c(1,4), width = "10em")
+```
+

@@ -1,0 +1,133 @@
+﻿title,district,name,party,current_age,residence,first_elected,
+Representative,1,Joel Kitchens,Rep,65,Sturgeon Bay,2014,
+Representative,2,Shae Sortwell,Rep,37,Two Rivers,2018,
+Representative,3,Ron Tusler,Rep,38,Appleton,2016,
+Representative,4,David Steffen,Rep,50,Howard,2014,
+Representative,5,--Vacant--,,,,,
+Representative,6,Gary Tauchen,Rep,69,Bonduel,2006,
+Representative,7,Daniel Riemer,Dem,35,Milwaukee,2012,
+Representative,8,Sylvia Ortiz-Velez,Dem,42,Milwaukee,2020,
+Representative,9,Marisabel Cabrera,Dem,46,Milwaukee,2018,
+Representative,10,David Bowen,Dem,35,Milwaukee,2014,
+Representative,11,Dora Drake,Dem,29,Milwaukee,2020,
+Representative,12,LaKeshia Myers,Dem,38,Milwaukee,2018,
+Representative,13,Sara Rodriguez,Dem,47,Brookfield,2020,
+Representative,14,Robyn Vining,Dem,46,Wauwatosa,2018,
+Representative,15,Joe Sanfelippo,Rep,58,New Berlin,2012,
+Representative,16,Kalan Haywood,Dem,23,Milwaukee,2018,
+Representative,17,Supreme Moore Omokunde,Dem,43,Milwaukee,2020,
+Representative,18,Evan Goyke,Dem,40,Milwaukee,2012,
+Representative,19,Jonathan Brostoff,Dem,39,Milwaukee,2014,
+Representative,20,Christine Sinicki,Dem,62,Bay View,1998,
+Representative,21,Jessie Rodriguez,Rep,45,Franklin,2013,
+Representative,22,Janel Brandtjen,Rep,56,Waukesha,2014,
+Representative,23,Deb Andraca,Dem,52,Whitefish Bay,2020,
+Representative,24,Dan Knodl,Rep,63,Germantown,2008,
+Representative,25,Paul Tittl,Rep,61,Manitowoc,2012,
+Representative,26,Terry Katsma,Rep,64,Oostburg,2014,
+Representative,27,--Vacant--,,,,,
+Representative,28,Gae Magnafici,Rep,70,Dresser,2018,
+Representative,29,Clint Moses,Rep,46,Menomonie,2020,
+Representative,30,Shannon Zimmerman,Rep,50,River Falls,2016,
+Representative,31,Amy Loudenbeck,Rep,53,Clinton,2010,
+Representative,32,Tyler August,Rep,39,Walworth,2010,
+Representative,33,Cody Horlacher,Rep,35,Mukwonago,2014,
+Representative,34,Rob Swearingen,Rep,59,Rhinelander,2012,
+Representative,35,Calvin Callahan,Rep,23,Wilson,2020,
+Representative,36,Jeffrey Mursau,Rep,68,Crivitz,2004,
+Representative,37,William Penterman,Rep,26,Columbus,2021,
+Representative,38,Barbara Dittrich,Rep,58,Oconomowoc,2018,
+Representative,39,Mark Born,Rep,46,Beaver Dam,2012,
+Representative,40,Kevin David Petersen,Rep,57,Waupaca,2006,
+Representative,41,Alex Dallman,Rep,30,Green Lake,2020,
+Representative,42,Jon Plumer,Rep,67,Lodi,2018,
+Representative,43,Don Vruwink,Dem,70,Milton,2016,
+Representative,44,Sue Conley,Dem,62,Janesville,2020,
+Representative,45,Mark Spreitzer,Dem,35,Beloit,2014,
+Representative,46,Gary Hebl,Dem,71,Sun Prairie,2004,
+Representative,47,Jimmy P. Anderson,Dem,36,Fitchburg,2016,
+Representative,48,Samba Baldeh,Dem,51,Madison,2020,
+Representative,49,Travis Tranel,Rep,37,Cuba City,2010,
+Representative,50,Tony Kurtz,Rep,55,Wonewoc,2018,
+Representative,51,Todd Novak,Rep,57,Dodgeville,2014,
+Representative,52,Jeremy Thiesfeldt,Rep,56,Fond du Lac,2010,
+Representative,53,Michael Schraa,Rep,61,Oshkosh,2012,
+Representative,54,Gordon Hintz,Dem,48,Oshkosh,2006,
+Representative,55,Rachael Cabral-Guevara,Rep,46,Fox Crossing,2020,
+Representative,56,Dave Murphy,Rep,68,Greenville,2012,
+Representative,57,Lee Snodgrass,Dem,53,Appleton,2020,
+Representative,58,Rick Gundrum,Rep,57,Slinger,2018,
+Representative,59,Timothy Ramthun,Rep,65,Campbellsport,2018,
+Representative,60,Robert Brooks,Rep,57,Saukville,2011,
+Representative,61,--Vacant--,,,,,
+Representative,62,Robert Wittke,Rep,65,Racine,2018,
+Representative,63,Robin Vos,Rep,54,Rochester,2004,
+Representative,64,Tip McGuire,Dem,35,Somers,2019,
+Representative,65,Tod Ohnstad,Dem,70,Kenosha,2012,
+Representative,66,Greta Neubauer,Dem,31,Racine,2018,
+Representative,67,Rob Summerfield,Rep,42,Bloomer,2016,
+Representative,68,Jesse James,Rep,50,Altoona,2018,
+Representative,69,Donna Rozar,Rep,72,Marshfield,2020,
+Representative,70,Nancy VanderMeer,Rep,63,Tomah,2014,
+Representative,71,Katrina Shankland,Dem,35,Stevens Point,2012,
+Representative,72,Scott Krug,Rep,47,Wisconsin Rapids,2010,
+Representative,73,Nick Milroy,Dem,48,Superior,2008,
+Representative,74,Beth Meyers,Dem,63,Bayfield,2014,
+Representative,75,David Armstrong,Rep,61,Rice Lake,2020,
+Representative,76,Francesca Hong,Dem,34,Madison,2020,
+Representative,77,Shelia Stubbs,Dem,51,Madison,2018,
+Representative,78,Lisa Subeck,Dem,51,Madison,2014,
+Representative,79,Dianne Hesselbein,Dem,51,Middleton,2012,
+Representative,80,Sondy Pope-Roberts,Dem,72,Mount Horeb,2002,
+Representative,81,Dave Considine,Dem,70,Baraboo,2014,
+Representative,82,Ken Skowronski,Rep,84,Franklin,2013,
+Representative,83,Chuck Wichgers,Rep,57,Muskego,2016,
+Representative,84,--Vacant--,,,,,
+Representative,85,Patrick Snyder,Rep,66,Schofield,2016,
+Representative,86,John Spiros,Rep,61,Marshfield,2012,
+Representative,87,James W. Edming,Rep,77,Glen Flora,2014,
+Representative,88,John Macco,Rep,64,De Pere,2014,
+Representative,89,Elijah Behnke,Rep,39,Pensaukee,2021,
+Representative,90,Kristina Shelton,Dem,42,Green Bay,2020,
+Representative,91,Jodi Emerson,Dem,49,Eau Claire,2018,
+Representative,92,Treig Pronschinske,Rep,55,Mondovi,2016,
+Representative,93,Warren Petryk,Rep,67,Eleva,2010,
+Representative,94,Steve Doyle,Dem,64,Onalaska,2011,
+Representative,95,Jill Billings,Dem,60,La Crosse,2011,
+Representative,96,Loren Oldenburg,Rep,57,Viroqua,2018,
+Representative,97,Scott Allen,Rep,56,Waukesha,2014,
+Representative,98,Adam Neylon,Rep,37,Pewaukee,2013,
+Representative,99,Cindi Duchow,Rep,63,Delafield,2015,
+Senator,1,André Jacque,Rep,42,Bellevue,2018,2022
+Senator,2,Robert Cowles,Rep,72,Green Bay,1987,2024
+Senator,3,Tim Carpenter,Dem,62,Milwaukee,2002,2022
+Senator,4,Lena Taylor,Dem,56,Milwaukee,2004,2024
+Senator,5,Dale P. Kooyenga,Rep,43,Brookfield,2018,2022
+Senator,6,La Tonya Johnson,Dem,50,Milwaukee,2016,2024
+Senator,7,Chris Larson,Dem,42,Milwaukee,2010,2022
+Senator,8,Alberta Darling,Rep,78,River Hills,1992,2024
+Senator,9,Devin LeMahieu,Rep,50,Sheboygan,2014,2022
+Senator,10,Rob Stafsholt,Rep,47,New Richmond,2020,2024
+Senator,11,Stephen Nass,Rep,70,Whitewater,2014,2022
+Senator,12,Mary Felzkowski,Rep,59,Irma,2020,2024
+Senator,13,John Jagler,Rep,53,Watertown,2021,2022
+Senator,14,Joan Ballweg,Rep,70,Markesan,2020,2024
+Senator,15,Janis Ringhand,Dem,72,Evansville,2014,2022
+Senator,16,Melissa Agard,Dem,53,Monona,2020,2024
+Senator,17,Howard Marklein,Rep,68,Spring Green,2014,2022
+Senator,18,Dan Feyen,Rep,54,Fond du Lac,2016,2024
+Senator,19,Roger Roth,Rep,44,Appleton,2014,2022
+Senator,20,Duey Stroebel,Rep,63,Saukville,2015,2024
+Senator,21,Van H. Wanggaard,Rep,70,Racine,2014,2022
+Senator,22,Robert Wirch,Dem,79,Kenosha,1996,2024
+Senator,23,Kathy Bernier,Rep,66,Chippewa Falls,2018,2022
+Senator,24,Patrick Testin,Rep,34,Stevens Point,2016,2024
+Senator,25,Janet Bewley,Dem,71,Ashland,2014,2022
+Senator,26,Kelda Roys,Dem,43,Madison,2020,2024
+Senator,27,Jon Erpenbach,Dem,61,West Point,1998,2022
+Senator,28,Julian Bradley,Rep,41,Franklin,2020,2024
+Senator,29,Jerry Petrowski,Rep,72,Marathon,2012,2022
+Senator,30,Eric Wimberger,Rep,43,De Pere,2020,2024
+Senator,31,Jeff Smith,Dem,67,Eau Claire,2018,2022
+Senator,32,Brad Pfaff,Dem,54,Onalaska,2020,2024
+Senator,33,Chris Kapenga,Rep,50,Delafield,2015,2022
