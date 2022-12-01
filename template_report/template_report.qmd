@@ -1,5 +1,5 @@
 ---
-title: "School Breakdown for State Legislators"
+title: "Milwaukee School Breakdown for State Legislators"
 subtitle: "`r glue::glue('{params$honorific} {params$representative}--District {params$district}')`"
 mainfont: Verdana
 sansfont: Georgia
@@ -42,11 +42,12 @@ font_add("Georgia", "/Library/Fonts/Georgia.ttf")
 font_add("Verdana", "/Library/Fonts/Supplemental/Verdana.ttf")
 showtext_auto()
 
+prof <- read_rds("../../report_cards_2021-22/data/all_school_prof.rda")
+
 if (params$honorific == "Representative") {
   ass_with_reps <- read_rds("../data/ass_with_reps.rda")
 } else {
   ass_with_reps <- read_rds("../data/ass_with_sens.rda")
-
 }
 
 geo_schools <- read_csv("../../000_data_temp/geocoded_mke_schools.csv") %>%
@@ -74,15 +75,21 @@ make_data <- function(ass) {
   
   if (params$honorific == "Representative") {
 
-  o <- ass_with_reps %>%
-    filter(ASM2021 %in% ass)
+    o <- ass_with_reps %>%
+      filter(ASM2021 %in% ass)
+  
   } else {
-      o <- ass_with_reps %>%
-    filter(SEN2021 %in% ass)
+    
+    o <- ass_with_reps %>%
+      filter(SEN2021 %in% ass)
+      
   }
   
   hq_definition <- c("Exceeds Expectations",
                      "Significantly Exceeds Expectations") 
+  
+  lq_definition <- c("Fails to Meet Expectations",
+                     "Meets Few Expectations")
   
   
   schools_in_zip <- st_intersection(geo_schools, o) %>%
@@ -100,8 +107,11 @@ make_data <- function(ass) {
                                                           "Exceeds Expectations",
                                                           "Significantly Exceeds Expectations")),
            clean_rating = replace_na(clean_rating, "No Rating"),
-           meets = case_when(clean_rating %in% hq_definition ~ "Meeting Expectations",
-                             TRUE ~ "Not Meeting Expectations"))
+           meets = case_when(clean_rating %in% hq_definition ~ "Exceeding Expectations",
+                             clean_rating %in% lq_definition ~ "Not Meeting Expectations",
+                             clean_rating == "Meets Expectations" ~ "Meeting Expectations",
+                             clean_rating == "No Rating" ~ "No Rating",
+                             TRUE ~ "OH NO"))
   
   clean_rated <- schools_in_zip %>%
     as_tibble() 
@@ -114,14 +124,24 @@ make_data <- function(ass) {
                                                           "Exceeds Expectations",
                                                           "Significantly Exceeds Expectations")),
            clean_rating = replace_na(clean_rating, replace = "No Rating"),
-           meets = case_when(clean_rating %in% hq_definition ~ "High Quality",
-                             TRUE ~ "Not High Quality")) %>%
+           meets = case_when(clean_rating %in% hq_definition ~ "Exceeding Expectations",
+                             clean_rating %in% lq_definition ~ "Not Meeting Expectations",
+                             clean_rating == "Meets Expectations" ~ "Meeting Expectations",
+                             clean_rating == "No Rating" ~ "No Rating",
+                             TRUE ~ "OH NO"),
+           meets = factor(meets, levels = c("No Rating",
+                                            "Not Meeting Expectations",
+                                            "Meeting Expectations",
+                                            "Exceeding Expectations"))) %>%
     group_by(clean_rating, meets) %>%
     summarise(enr = sum(clean_enr_20_21)) %>%
     ungroup() %>%
     arrange(clean_rating)
   
-  return(c)
+  both <- list(clean_rated = clean_rated,
+               c = c)
+  
+  return(both)
   
 }
 
@@ -132,7 +152,7 @@ make_data <- function(ass) {
 ```
 
 \newpage
-# District `r params$district` Overview
+# District `r params$district` Location
 
 \vspace{.25in}
 
@@ -187,6 +207,124 @@ if (params$honorific == "Representative") {
 ```
 
 \newpage
+# School Enrollment
+
+```{r}
+#| fig-align: center
+#| out-width: 90%
+
+c <- make_data(params$district)
+
+cc <- c$clean_rated |> 
+  group_by(broad_agency_type) |> 
+  summarise(enr = sum(school_enrollment, na.rm = TRUE)) |> 
+  mutate(broad_agency_type = case_when(broad_agency_type == "District Operated" ~ "Milwaukee Public Schools",
+                                       broad_agency_type == "Independently Operated" ~ "Public Charter Schools",
+                                       broad_agency_type == "Private" ~ "Private Schools"),
+         broad_agency_type = factor(broad_agency_type,
+                                    levels = c("Milwaukee Public Schools",
+                                               "Public Charter Schools",
+                                               "Private Schools")))
+
+part <- c$clean_rated |> 
+  filter(accurate_agency_type == "Partnership") |> 
+  summarise(total = sum(school_enrollment)) |> 
+  pull(total)
+
+if (!is.na(part)) {
+  if (part > 0) {
+    cap <- glue("{part} students enrolled in Partnership schools included here with ",
+                "Public Charter School enrollment.")
+  } else {
+    cap <- ""
+  }
+}
+
+# sector enrollment
+
+enr_by_sector <- cc |> 
+  ggplot(aes(broad_agency_type, enr)) +
+  geom_col(fill = cfc_darkblue, width = .5) +
+  geom_text(aes(label = comma(enr)), vjust = -.5, family = "Verdana") +
+  scale_y_continuous(labels = comma) +
+  scale_x_discrete(labels = function(x) str_wrap(x, 15)) +
+  coord_cartesian(clip = "off") +
+  labs(title = "Enrollment by School Sector",
+       y = "Enrollment (2021-22 School Year)",
+       x = "",
+       caption = cap) +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        axis.text.x = element_text(size = 8),
+        axis.title = element_text(size = 12),
+        plot.title.position = "plot",
+        plot.title = element_text(margin = margin(b = 20)),
+        plot.caption = element_text(hjust = 0, size = 8, color = "grey50"),
+        plot.caption.position = "plot")
+
+
+# subgroup enrollment
+
+sub_enr <- c$clean_rated |> 
+  filter(!is.na(school_enrollment) & !is.na(per_ed)) |> 
+  summarise(Black = weighted.mean(per_b_aa, w = school_enrollment),
+            Hispanic = weighted.mean(per_hisp_lat, w = school_enrollment),
+            White = weighted.mean(per_white, w = school_enrollment),
+            Asian = weighted.mean(per_asian, w = school_enrollment),
+            "Economically Disadvantaged" = weighted.mean(per_ed, w = school_enrollment),
+            "Students with Disabilities" = weighted.mean(per_swd, w = school_enrollment),
+            "Limited English Proficiency" = weighted.mean(per_lep, w = school_enrollment)) |> 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "perc") |> 
+  mutate(group_by = ifelse(group %in% c("Black", "Hispanic", "White", "Asian"), "Race/Ethnicity", "Other Groups"),
+         group_by = factor(group_by, levels = c("Race/Ethnicity", "Other Groups")))
+
+
+enr_by_subgroup <- sub_enr |> 
+  ggplot(aes(group, perc)) +
+  geom_col(width = .5, fill = cfc_darkblue) +
+  geom_text(aes(label = label_percent(1)(stat(y))), vjust = -.25,
+            stat = "summary", fun = sum, family = "Verdana") +
+  facet_wrap(~ group_by, scales = "free_x", strip.position = "bottom") +
+  scale_x_discrete(labels = function(x) str_wrap(x, 10), expand = c(.25,.25)) +
+  scale_y_continuous(labels = label_percent(), limits = c(0, 1)) +
+  coord_cartesian(clip = "off") +
+  labs(title = "Student Enrollment Population",
+       y = "Percent of Enrollment in District",
+       x = "") +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.spacing = unit(0, "lines"),
+        strip.placement = "outside",
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(margin = margin(t = 10, b = 10)),
+        axis.text.x = element_text(size = 8),
+        plot.title.position = "plot",
+        plot.title = element_text(margin = margin(b = 20)),
+        plot.caption = element_text(hjust = 0, color = "grey50"),
+        plot.caption.position = "plot")
+
+
+
+
+# plot by sector
+
+enr_by_sector
+
+```
+
+\vspace{.5in}
+
+```{r}
+#| fig-align: center
+#| out-width: 90%
+#| fig-pos: "H"
+
+enr_by_subgroup
+
+```
+
+\newpage
+# School Quality
 
 ```{r}
 #| fig-align: center
@@ -196,48 +334,51 @@ if (params$honorific == "Representative") {
 
 c <- make_data(params$district) 
 
-enr_by_rc <- c |> 
-  ggplot(aes(clean_rating, enr)) +
-  geom_col(fill = cfc_darkblue, width = .5) +
+enr_by_rc <- c$c |> 
+  ggplot(aes(clean_rating, enr, fill = meets)) +
+  geom_col(width = .5) +
   geom_text(aes(label = comma(enr)), vjust = -.5, family = "Verdana") +
   scale_y_continuous(labels = comma) +
   scale_x_discrete(labels = function(x) str_wrap(x, 15)) +
+  scale_fill_manual(values = rev(cfc_colors[1:4])) +
   coord_cartesian(clip = "off") +
   labs(title = "Enrollment by Report Card Rating",
        y = "Enrollment (2021-22 School Year)",
        x = "Report Card Rating (2021-22 School Year)") +
-  theme(panel.grid.minor = element_blank(),
+  theme(legend.position = "none",
+        panel.grid.minor = element_blank(),
         panel.grid.major.x = element_blank(),
         axis.text.x = element_text(size = 8),
         axis.title = element_text(size = 12),
         plot.title.position = "plot",
-        plot.title = element_text(margin = margin(b = 10)),
+        plot.title = element_text(margin = margin(b = 20)),
         plot.caption = element_text(hjust = 0),
         plot.caption.position = "plot")
 
 
-enr_by_quality <- c |> 
-    ggplot(aes(meets, enr)) +
-    geom_col(width = .5, fill = cfc_darkblue) +
-    geom_text(aes(label = comma(stat(y), 1)), vjust = -.25, 
-              stat = "summary", fun = sum, family = "Verdana") +
-    scale_x_discrete(labels = function(x) str_wrap(x, 10)) +
-    scale_y_continuous(labels = comma) +
-    coord_cartesian(clip = "off") +
-    labs(title = "Enrollment by School Quality",
-         y = "Enrollment (2021-22 School Year)",
-         x = "Report Card Rating (2021-22 School Year)",
-         caption = paste("High Quality includes 4-5 star schools.",
-                         "Not High Quality includes all other rated schools.",
-                         sep = "\n")) +
-    theme(panel.grid.minor = element_blank(),
-          panel.grid.major.x = element_blank(),
-          axis.title.y = element_text(size = 10),
-          axis.title.x = element_text(margin = margin(t = 10, b = 10)),
-          plot.title.position = "plot",
-          plot.title = element_text(margin = margin(b = 10)),
-          plot.caption = element_text(hjust = 0, color = "grey50"),
-          plot.caption.position = "plot")
+enr_by_quality <- c$c |> 
+  filter(meets != "No Rating") |> 
+  ggplot(aes(meets, enr, fill = meets)) +
+  geom_col(width = .5) +
+  geom_text(aes(label = comma(stat(y), 1)), vjust = -.25, 
+            stat = "summary", fun = sum, family = "Verdana") +
+  scale_x_discrete(labels = function(x) str_wrap(x, 10)) +
+  scale_y_continuous(labels = comma) +
+  scale_fill_manual(values = rev(cfc_colors[1:3])) +
+  coord_cartesian(clip = "off") +
+  labs(title = "Enrollment by School Quality",
+       y = "Enrollment (2021-22 School Year)",
+       x = "Report Card Rating (2021-22 School Year)",
+       caption = "Schools with no rating excluded here.") +
+  theme(legend.position = "none",
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        axis.title.y = element_text(size = 10),
+        axis.title.x = element_text(margin = margin(t = 10, b = 10)),
+        plot.title.position = "plot",
+        plot.title = element_text(margin = margin(b = 20)),
+        plot.caption = element_text(hjust = 0, size = 8, color = "grey50"),
+        plot.caption.position = "plot")
 
 enr_by_rc
 
@@ -258,6 +399,8 @@ enr_by_quality
 \newpage
 # List of Schools in District `r params$district`
 
+\renewcommand{\arraystretch}{1.5}
+
 ```{r}
 
 if (params$honorific == "Representative") {
@@ -270,10 +413,13 @@ if (params$honorific == "Representative") {
                 filter(school_year == "2021-22") |> 
                 select(dpi_true_id,
                        overall_rating, 
-                       overall_score)) |> 
-    select(school_name,
+                       overall_score,
+                       school_enrollment)) |> 
+    select(dpi_true_id,
+           school_name,
            accurate_agency_type,
            grade_band,
+           school_enrollment,
            overall_rating,
            overall_score) |> 
     arrange(school_name)
@@ -287,22 +433,39 @@ if (params$honorific == "Representative") {
                 filter(school_year == "2021-22") |> 
                 select(dpi_true_id,
                        overall_rating, 
-                       overall_score)) |> 
-    select(school_name,
+                       overall_score,
+                       school_enrollment)) |> 
+    select(dpi_true_id,
+           school_name,
            accurate_agency_type,
            grade_band,
+           school_enrollment,
            overall_rating,
            overall_score) |> 
     arrange(school_name)
 }
 
+pp <- prof |> 
+  filter(school_year == "2021-22" & pa == "pa") |> 
+  select(dpi_true_id,
+         test_subject,
+         perc) |> 
+  pivot_wider(names_from = test_subject, values_from = perc)
+
+tt <- left_join(t, pp) |> 
+  select(-dpi_true_id) |> 
+  mutate_at(c("ELA", "Mathematics"), label_percent(1))
 
 
-t |> 
+
+
+tt |> 
   filter(!is.na(school_name)) |> 
-  kbl(booktabs = T, longtable = TRUE, caption = "School List with 2021-22 Report Cards",
-      col.names = c("School", "Sector", "Grades", "Report Card Rating", "Report Card Score")) |> 
-  kable_styling(latex_options = c("striped", "HOLD_position"), font_size = 8) |> 
-  column_spec(c(1,4), width = "10em")
+  kbl(booktabs = T, longtable = TRUE, caption = "School List with 2021-22 Data",
+      align = c("l", "l", "c", "c", "l", "c", "c", "c"),
+      col.names = c("School", "Sector", "Grades", "Enrollment", "Overall Rating", "Score", "ELA", "Math")) |> 
+  kable_styling(latex_options = c("striped", "HOLD_position", "repeat_header"), font_size = 8) |> 
+  column_spec(c(1,2,5), width = "10em") |> 
+  add_header_above(header = c(" " = 4, "Report Card" = 2, "Proficiency" = 2), bold = TRUE)
 ```
 

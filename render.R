@@ -66,8 +66,6 @@ ass_with_sens <- left_join(mke_ass,
                            by = c("SEN2021" = "district"))
 
 
-env
-
 saveRDS(ass_with_reps, "data/ass_with_reps.rda")
 
 saveRDS(ass_with_sens, "data/ass_with_sens.rda")
