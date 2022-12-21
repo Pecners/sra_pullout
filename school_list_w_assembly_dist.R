@@ -5,6 +5,17 @@ library(scales)
 
 ass_with_reps <- read_rds("data/ass_with_reps.rda")
 prof <- read_rds("../report_cards_2021-22/data/all_school_prof.rda")
+reps <- read_csv("data/state_legislature_2023.csv")
+rep_skinny <- reps |> 
+  select(title:name) |> 
+  mutate(name = str_remove_all(name, " \\(i\\)"))
+
+cross <- read_csv("../000_data_temp/assembly_senate_dist_crosswalk.csv")
+
+sen_skinny <- left_join(rep_skinny |> 
+                          filter(title == "Senator"),
+                        cross, by = c("district" = "SEN2021"))
+  
 
 
 geo_schools <- read_csv("../000_data_temp/geocoded_mke_schools.csv") %>%
@@ -60,20 +71,36 @@ names(tt)[c(1, 9:10)] <- c("assembly_district",
                           "math_proficiency")
 
 ttf <- tt |> 
-  select(assembly_district,
-         dpi_true_id,
-         school_name,
-         accurate_agency_type,
-         grade_band,
-         school_enrollment,
-         rc_overall_score = overall_score,
-         rc_overall_rating = overall_rating,
-         ela_proficiency,
-         math_proficiency) |> 
   filter(!is.na(school_name)) |> 
-  mutate(grade_band = paste0("'", grade_band))
+  mutate(grade_band = paste0("'", grade_band)) |> 
+  left_join(rep_skinny |> 
+              filter(title == "Representative") |> 
+              select(-title) |> 
+              mutate(district = as.character(district)) |> 
+              rename("Representative" = name),
+            by = c("assembly_district" = "district")) |> 
+  left_join(sen_skinny |> 
+              mutate(ASM2021 = as.character(ASM2021)),
+            by = c("assembly_district" = "ASM2021")) 
 
-write_csv(ttf, "data/school_list_with_assembly_districts.csv")
+glimpse(ttf)
+
+ttf |> 
+  mutate_at(c("assembly_district", "district"), as.numeric) |> 
+  arrange(assembly_district) |> 
+  select("Assembly District" = assembly_district,
+         Representative,
+         "Senate District" = district,
+         "Senator" = name,
+         "School Name" = school_name,
+         "Sector" = accurate_agency_type,
+         "Grade Band" = grade_band,
+         "Enrollment" = school_enrollment,
+         "RC Overall Score" = overall_score,
+         "RC Overall Rating" = overall_rating,
+         "ELA Proficiency" = ela_proficiency,
+         "Math Proficiency" = math_proficiency) |> 
+  write_csv("data/MKE School List with Leges.csv")
 
 mke_schools <- make_mke_schools() |> 
   filter(school_year == "2021-22")
