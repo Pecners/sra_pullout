@@ -1,133 +1,133 @@
-﻿title,district,name
-Senator,1,André Jacque (i)
-Senator,2,Robert Cowles
-Senator,3,Tim Carpenter (i)
-Senator,4,Lena Taylor
-Senator,5,Rob Hutton
-Senator,6,La Tonya Johnson
-Senator,7,Chris Larson (i)
-Senator,8,Alberta Darling
-Senator,9,Devin LeMahieu (i)
-Senator,10,Rob Stafsholt
-Senator,11,Stephen Nass (i)
-Senator,12,Mary Felzkowski
-Senator,13,John Jagler (i)
-Senator,14,Joan Ballweg
-Senator,15,Mark Spreitzer
-Senator,16,Melissa Agard
-Senator,17,Howard Marklein (i)
-Senator,18,Dan Feyen
-Senator,19,Rachael Cabral-Guevara
-Senator,20,Duey Stroebel
-Senator,21,Van H. Wanggaard (i)
-Senator,22,Robert Wirch
-Senator,23,Jesse James
-Senator,24,Patrick Testin
-Senator,25,Romaine Quinn
-Senator,26,Kelda Roys
-Senator,27,Dianne Hesselbein
-Senator,28,Julian Bradley
-Senator,29,Cory Tomczyk
-Senator,30,Eric Wimberger
-Senator,31,Jeff Smith (i)
-Senator,32,Brad Pfaff
-Senator,33,Chris Kapenga (i)
-Representative,1,Joel Kitchens (i)
-Representative,2,Shae Sortwell (i)
-Representative,3,Ron Tusler (i)
-Representative,4,David Steffen (i)
-Representative,5,Joy Goeben
-Representative,6,Peter Schmidt
-Representative,7,Daniel Riemer (i)
-Representative,8,Sylvia Ortiz-Velez (i)
-Representative,9,Marisabel Cabrera (i)
-Representative,10,Darrin Madison
-Representative,11,Dora Drake (i)
-Representative,12,LaKeshia Myers (i)
-Representative,13,Tom Michalski
-Representative,14,Robyn Vining (i)
-Representative,15,Dave Maxey
-Representative,16,Kalan Haywood (i)
-Representative,17,Supreme Moore Omokunde (i)
-Representative,18,Evan Goyke (i)
-Representative,19,Ryan Clancy
-Representative,20,Christine Sinicki (i)
-Representative,21,Jessie Rodriguez (i)
-Representative,22,Janel Brandtjen (i)
-Representative,23,Deb Andraca (i)
-Representative,24,Dan Knodl (i)
-Representative,25,Paul Tittl (i)
-Representative,26,Terry Katsma (i)
-Representative,27,Amy Binsfeld
-Representative,28,Gae Magnafici (i)
-Representative,29,Clint Moses (i)
-Representative,30,Shannon Zimmerman (i)
-Representative,31,Ellen Schutt
-Representative,32,Tyler August (i)
-Representative,33,Scott Johnson
-Representative,34,Rob Swearingen (i)
-Representative,35,Calvin Callahan (i)
-Representative,36,Jeffrey Mursau (i)
-Representative,37,William Penterman (i)
-Representative,38,Barbara Dittrich (i)
-Representative,39,Mark Born (i)
-Representative,40,Kevin Petersen (i)
-Representative,41,Alex Dallman (i)
-Representative,42,Jon Plumer (i)
-Representative,43,Jenna Jacobson
-Representative,44,Sue Conley (i)
-Representative,45,Clinton Anderson
-Representative,46,Melissa Ratcliff
-Representative,47,Jimmy Anderson (i)
-Representative,48,Samba Baldeh (i)
-Representative,49,Travis Tranel (i)
-Representative,50,Tony Kurtz (i)
-Representative,51,Todd Novak (i)
-Representative,52,Jerry O'Connor
-Representative,53,Michael Schraa (i)
-Representative,54,Lori Palmeri
-Representative,55,Nate Gustafson
-Representative,56,Dave Murphy (i)
-Representative,57,Lee Snodgrass (i)
-Representative,58,Rick Gundrum (i)
-Representative,59,Ty Bodden
-Representative,60,Robert Brooks (i)
-Representative,61,Amanda Nedweski
-Representative,62,Robert Wittke (i)
-Representative,63,Robin Vos (i)
-Representative,64,Tip McGuire (i)
-Representative,65,Tod Ohnstad (i)
-Representative,66,Greta Neubauer (i)
-Representative,67,Rob Summerfield (i)
-Representative,68,Karen Hurd
-Representative,69,Donna Rozar (i)
-Representative,70,Nancy VanderMeer (i)
-Representative,71,Katrina Shankland (i)
-Representative,72,Scott Krug (i)
-Representative,73,Angie Sapik
-Representative,74,Chanz Green
-Representative,75,David Armstrong (i)
-Representative,76,Francesca Hong (i)
-Representative,77,Shelia Stubbs (i)
-Representative,78,Lisa Subeck (i)
-Representative,79,Alex Joers
-Representative,80,Mike Bare
-Representative,81,Dave Considine (i)
-Representative,82,Chuck Wichgers (i)
-Representative,83,Nik Rettinger
-Representative,84,Bob Donovan
-Representative,85,Patrick Snyder (i)
-Representative,86,John Spiros (i)
-Representative,87,James Edming (i)
-Representative,88,John Macco (i)
-Representative,89,Elijah Behnke (i)
-Representative,90,Kristina Shelton (i)
-Representative,91,Jodi Emerson (i)
-Representative,92,Treig Pronschinske (i)
-Representative,93,Warren Petryk (i)
-Representative,94,Steve Doyle (i)
-Representative,95,Jill Billings (i)
-Representative,96,Loren Oldenburg (i)
-Representative,97,Scott Allen (i)
-Representative,98,Adam Neylon (i)
-Representative,99,Cindi Duchow (i)
+﻿title,district,name,party_aff,official_phone,official_email
+Senator,1,André Jacque (i),R,(608) 266-3512,Sen.Jacque@legis.wisconsin.gov
+Senator,2,Robert Cowles,R,(608) 266-0484,Sen.Cowles@legis.wisconsin.gov
+Senator,3,Tim Carpenter (i),D,(608) 266-8535,Sen.Carpenter@legis.wisconsin.gov
+Senator,4,Lena Taylor,D,(608) 266-5810,Sen.Taylor@legis.wisconsin.gov
+Senator,5,Rob Hutton,R,(608) 266-2512,Sen.Hutton@legis.wisconsin.gov
+Senator,6,La Tonya Johnson,D,(608) 266-2500,Sen.Johnson@legis.wisconsin.gov
+Senator,7,Chris Larson (i),D,(608) 266-7505,Sen.Larson@legis.wisconsin.gov
+Senator,8,Alberta Darling,R,(608) 266-5830,Sen.Darling@legis.wisconsin.gov
+Senator,9,Devin LeMahieu (i),R,(608) 266-2056,Sen.LeMahieu@legis.wisconsin.gov
+Senator,10,Rob Stafsholt,R,(608) 266-7745,Sen.Stafsholt@legis.wisconsin.gov
+Senator,11,Stephen Nass (i),R,(608) 266-2635,Sen.Nass@legis.wisconsin.gov
+Senator,12,Mary Felzkowski,R,(608) 266-2509,Sen.Felzkowski@legis.wisconsin.gov
+Senator,13,John Jagler (i),R,(608) 266-5660,Sen.Jagler@legis.wisconsin.gov
+Senator,14,Joan Ballweg,R,(608) 266-0751,Sen.Ballweg@legis.wisconsin.gov
+Senator,15,Mark Spreitzer,D,(608) 266-2253,Sen.Spreitzer@legis.wisconsin.gov
+Senator,16,Melissa Agard,D,(608) 266-9170,Sen.Agard@legis.wisconsin.gov
+Senator,17,Howard Marklein (i),R,(608) 266-0703,Sen.Marklein@legis.wisconsin.gov
+Senator,18,Dan Feyen,R,(608) 266-5300,Sen.Feyen@legis.wisconsin.gov
+Senator,19,Rachael Cabral-Guevara,R,(608) 266-0718,Sen.Cabral-Guevara@legis.wisconsin.gov
+Senator,20,Duey Stroebel,R,(608) 266-7513,Sen.Stroebel@legis.wisconsin.gov
+Senator,21,Van H. Wanggaard (i),R,(608) 266-1832,Sen.Wanggaard@legis.wisconsin.gov
+Senator,22,Robert Wirch,D,(608) 267-8979,Sen.Wirch@legis.wisconsin.gov
+Senator,23,Jesse James,R,(608) 266-7511,Sen.James@legis.wisconsin.gov
+Senator,24,Patrick Testin,R,(608) 266-3123,Sen.Testin@legis.wisconsin.gov
+Senator,25,Romaine Quinn,R,(608) 266-3510,Sen.Quinn@legis.wisconsin.gov
+Senator,26,Kelda Roys,D,(608) 266-1627,Sen.Roys@legis.wisconsin.gov
+Senator,27,Dianne Hesselbein,D,(608) 266-6670,Sen.Hesselbein@legis.wisconsin.gov
+Senator,28,Julian Bradley,R,(608) 266-5400,Sen.Bradley@legis.wisconsin.gov
+Senator,29,Cory Tomczyk,R,(608) 266-2502,Sen.Tomczyk@legis.wisconsin.gov
+Senator,30,Eric Wimberger,R,(608) 266-5670,Sen.Wimberger@legis.wisconsin.gov
+Senator,31,Jeff Smith (i),D,(608) 266-8546,Sen.Smith@legis.wisconsin.gov
+Senator,32,Brad Pfaff,D,(608) 266-5490,Sen.Pfaff@legis.wisconsin.gov
+Senator,33,Chris Kapenga (i),R,(608) 266-9174,Sen.Kapenga@legis.wisconsin.gov
+RepresentativeA45:F133,1,Joel Kitchens (i),R,(608) 266-5350,Rep.Kitchens@legis.wisconsin.gov
+Representative,2,Shae Sortwell (i),R,(608) 266-9870,Rep.Sortwell@legis.wisconsin.gov
+Representative,3,Ron Tusler (i),R,(608) 266-5831,Rep.Tusler@legis.wisconsin.gov
+Representative,4,David Steffen (i),R,(608) 266-5840,Rep.Steffen@legis.wisconsin.gov
+Representative,5,Joy Goeben,R,(608) 266-2401,Rep.Goeben@legis.wisconsin.gov
+Representative,6,Peter Schmidt,R,(608) 266-3097,Rep.Schmidt@legis.wisconsin.gov
+Representative,7,Daniel Riemer (i),D,(608) 266-1733,Rep.Riemer@legis.wisconsin.gov
+Representative,8,Sylvia Ortiz-Velez (i),D,(608) 267-7669,Rep.Ortiz-Velez@legis.wisconsin.gov
+Representative,9,Marisabel Cabrera (i),D,(608) 266-1707,Rep.Cabrera@legis.wisconsin.gov
+Representative,10,Darrin Madison,D,(608) 266-7671,Rep.Madison@legis.wisconsin.gov
+Representative,11,Dora Drake (i),D,(608) 266-3756,Rep.Drake@legis.wisconsin.gov
+Representative,12,LaKeshia Myers (i),D,(608) 266-5813,Rep.Myers@legis.wisconsin.gov
+Representative,13,Tom Michalski,R,(608) 267-9836,Rep.Michalski@legis.wisconsin.gov
+Representative,14,Robyn Vining (i),D,(608) 266-9180,Rep.Vining@legis.wisconsin.gov
+Representative,15,Dave Maxey,R,(608) 266-0620,Rep.Maxey@legis.wisconsin.gov
+Representative,16,Kalan Haywood (i),D,(608) 266-3786,Rep.Haywood@legis.wisconsin.gov
+Representative,17,Supreme Moore Omokunde (i),D,(608) 266-5580,Rep.MooreOmokunde@legis.wisconsin.gov
+Representative,18,Evan Goyke (i),D,(608) 266-0645,Rep.Goyke@legis.wisconsin.gov
+Representative,19,Ryan Clancy,D,(608) 266-0650,Rep.Clancy@legis.wisconsin.gov
+Representative,20,Christine Sinicki (i),D,(608) 266-8588,Rep.Sinicki@legis.wisconsin.gov
+Representative,21,Jessie Rodriguez (i),R,(608) 266-0610,Rep.Rodriguez@legis.wisconsin.gov
+Representative,22,Janel Brandtjen (i),R,(608) 267-2367,Rep.Brandtjen@legis.wisconsin.gov
+Representative,23,Deb Andraca (i),D,(608) 266-0486,Rep.Andraca@legis.wisconsin.gov
+Representative,24,Dan Knodl (i),R,(608) 266-3796,Rep.Knodl@legis.wisconsin.gov
+Representative,25,Paul Tittl (i),R,(608) 266-0315,Rep.Tittl@legis.wisconsin.gov
+Representative,26,Terry Katsma (i),R,(608) 266-0656,Rep.Katsma@legis.wisconsin.gov
+Representative,27,Amy Binsfeld,R,(608) 266-8530,Rep.Binsfeld@legis.wisconsin.gov
+Representative,28,Gae Magnafici (i),R,(608) 267-2365,Rep.Magnafici@legis.wisconsin.gov
+Representative,29,Clint Moses (i),R,(608) 266-7683,Rep.Moses@legis.wisconsin.gov
+Representative,30,Shannon Zimmerman (i),R,(608) 266-1526,Rep.Zimmerman@legis.wisconsin.gov
+Representative,31,Ellen Schutt,R,(608) 266-9967,Rep.Schutt@legis.wisconsin.gov
+Representative,32,Tyler August (i),R,(608) 266-1190,Rep.August@legis.wisconsin.gov
+Representative,33,Scott Johnson,R,(608) 266-5715,Rep.Johnson@legis.wisconsin.gov
+Representative,34,Rob Swearingen (i),R,(608) 266-7141,Rep.Swearingen@legis.wisconsin.gov
+Representative,35,Calvin Callahan (i),R,(608) 266-7694,Rep.Callahan@legis.wisconsin.gov
+Representative,36,Jeffrey Mursau (i),R,(608) 266-3780,Rep.Mursau@legis.wisconsin.gov
+Representative,37,William Penterman (i),R,(608) 266-9650,Rep.Penterman@legis.wisconsin.gov
+Representative,38,Barbara Dittrich (i),R,(608) 266-8551,Rep.Dittrich@legis.wisconsin.gov
+Representative,39,Mark Born (i),R,(608) 266-2540,Rep.Born@legis.wisconsin.gov
+Representative,40,Kevin Petersen (i),R,(608) 266-3794,Rep.Petersen@legis.wisconsin.gov
+Representative,41,Alex Dallman (i),R,(608) 266-8077,Rep.Dallman@legis.wisconsin.gov
+Representative,42,Jon Plumer (i),R,(608) 266-3404,Rep.Plumer@legis.wisconsin.gov
+Representative,43,Jenna Jacobson,D,(608) 266-3790,Rep.Jacobson@legis.wisconsin.gov
+Representative,44,Sue Conley (i),D,(608) 266-7503,Rep.Conley@legis.wisconsin.gov
+Representative,45,Clinton Anderson,D,(608) 266-1192,Rep.Canderson@legis.wisconsin.gov
+Representative,46,Melissa Ratcliff,D,(608) 266-7678,Rep.Ratcliff@legis.wisconsin.gov
+Representative,47,Jimmy Anderson (i),D,(608) 266-8570,Rep.Anderson@legis.wisconsin.gov
+Representative,48,Samba Baldeh (i),D,(608) 266-0960,Rep.Baldeh@legis.wisconsin.gov
+Representative,49,Travis Tranel (i),R,(608) 266-1170,Rep.Tranel@legis.wisconsin.gov
+Representative,50,Tony Kurtz (i),R,(608) 266-8531,Rep.Kurtz@legis.wisconsin.gov
+Representative,51,Todd Novak (i),R,(608) 266-7502,Rep.Novak@legis.wisconsin.gov
+Representative,52,Jerry O'Connor,R,(608) 266-3156,Rep.OConnor@legis.wisconsin.gov
+Representative,53,Michael Schraa (i),R,(608) 267-7990,Rep.Schraa@legis.wisconsin.gov
+Representative,54,Lori Palmeri,D,(608) 266-2254,Rep.Palmeri@legis.wisconsin.gov
+Representative,55,Nate Gustafson,R,(608) 266-5719,Rep.Gustafson@legis.wisconsin.gov
+Representative,56,Dave Murphy (i),R,(608) 266-7500,Rep.Murphy@legis.wisconsin.gov
+Representative,57,Lee Snodgrass (i),D,(608) 266-3070,Rep.Snodgrass@legis.wisconsin.gov
+Representative,58,Rick Gundrum (i),R,(608) 264-8486,Rep.Gundrum@legis.wisconsin.gov
+Representative,59,Ty Bodden,R,(608) 266-9175,Rep.Bodden@legis.wisconsin.gov
+Representative,60,Robert Brooks (i),R,(608) 267-2369,Rep.Rob.Brooks@legis.wisconsin.gov
+Representative,61,Amanda Nedweski,R,(608) 266-2530,Rep.Nedweski@legis.wisconsin.gov
+Representative,62,Robert Wittke (i),R,(608) 266-0731,Rep.Wittke@legis.wisconsin.gov
+Representative,63,Robin Vos (i),R,(608) 266-9171,Rep.Vos@legis.wisconsin.gov
+Representative,64,Tip McGuire (i),D,(608) 266-5504,Rep.McGuire@legis.wisconsin.gov
+Representative,65,Tod Ohnstad (i),D,(608) 266-0455,Rep.Ohnstad@legis.wisconsin.gov
+Representative,66,Greta Neubauer (i),D,(608) 266-0634,Rep.Neubauer@legis.wisconsin.gov
+Representative,67,Rob Summerfield (i),R,(608) 266-1194,Rep.Summerfield@legis.wisconsin.gov
+Representative,68,Karen Hurd,R,(608) 266-9172,Rep.Hurd@legis.wisconsin.gov
+Representative,69,Donna Rozar (i),R,(608) 267-0280,Rep.Rozar@legis.wisconsin.gov
+Representative,70,Nancy VanderMeer (i),R,(608) 266-8366,Rep.VanderMeer@legis.wisconsin.gov
+Representative,71,Katrina Shankland (i),D,(608) 267-9649,Rep.Shankland@legis.wisconsin.gov
+Representative,72,Scott Krug (i),R,(608) 266-0215,Rep.Krug@legis.wisconsin.gov
+Representative,73,Angie Sapik,R,(608) 266-0640,Rep.Sapik@legis.wisconsin.gov
+Representative,74,Chanz Green,R,(608) 266-7690,Rep.Green@legis.wisconsin.gov
+Representative,75,David Armstrong (i),R,(608) 266-2519,Rep.Armstrong@legis.wisconsin.gov
+Representative,76,Francesca Hong (i),D,(608) 266-5342,Rep.Hong@legis.wisconsin.gov
+Representative,77,Shelia Stubbs (i),D,(608) 266-3784,Rep.Stubbs@legis.wisconsin.gov
+Representative,78,Lisa Subeck (i),D,(608) 266-7521,Rep.Subeck@legis.wisconsin.gov
+Representative,79,Alex Joers,D,(608) 266-5340,Rep.Joers@legis.wisconsin.gov
+Representative,80,Mike Bare,D,(608) 266-3520,Rep.Bare@legis.wisconsin.gov
+Representative,81,Dave Considine (i),D,(608) 266-7746,Rep.Considine@legis.wisconsin.gov
+Representative,82,Chuck Wichgers (i),R,(608) 266-8590,Rep.Wichgers@legis.wisconsin.gov
+Representative,83,Nik Rettinger,R,(608) 266-3363,Rep.Rettinger@legis.wisconsin.gov
+Representative,84,Bob Donovan,R,(608) 267-5158,Rep.Donovan@legis.wisconsin.gov
+Representative,85,Patrick Snyder (i),R,(608) 266-0654,Rep.Snyder@legis.wisconsin.gov
+Representative,86,John Spiros (i),R,(608) 266-1182,Rep.Spiros@legis.wisconsin.gov
+Representative,87,James Edming (i),R,(608) 266-7506,Rep.Edming@legis.wisconsin.gov
+Representative,88,John Macco (i),R,(608) 266-0485,Rep.Macco@legis.wisconsin.gov
+Representative,89,Elijah Behnke (i),R,(608) 266-2343,Rep.Behnke@legis.wisconsin.gov
+Representative,90,Kristina Shelton (i),D,(608) 266-0616,Rep.Shelton@legis.wisconsin.gov
+Representative,91,Jodi Emerson (i),D,(608) 266-7461,Rep.Emerson@legis.wisconsin.gov
+Representative,92,Treig Pronschinske (i),R,(608) 266-7015,Rep.Pronschinske@legis.wisconsin.gov
+Representative,93,Warren Petryk (i),R,(608) 266-0660,Rep.Petryk@legis.wisconsin.gov
+Representative,94,Steve Doyle (i),D,(608) 266-0631,Rep.Doyle@legis.wisconsin.gov
+Representative,95,Jill Billings (i),D,(608) 266-5780,Rep.Billings@legis.wisconsin.gov
+Representative,96,Loren Oldenburg (i),R,(608) 266-3534,Rep.Oldenburg@legis.wisconsin.gov
+Representative,97,Scott Allen (i),R,(608) 266-8580,Rep.Allen@legis.wisconsin.gov
+Representative,98,Adam Neylon (i),R,(608) 266-5120,Rep.Neylon@legis.wisconsin.gov
+Representative,99,Cindi Duchow (i),R,(608) 266-3007,Rep.Duchow@legis.wisconsin.gov

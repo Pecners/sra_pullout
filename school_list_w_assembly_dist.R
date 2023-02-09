@@ -7,7 +7,7 @@ ass_with_reps <- read_rds("data/ass_with_reps.rda")
 prof <- read_rds("../report_cards_2021-22/data/all_school_prof.rda")
 reps <- read_csv("data/state_legislature_2023.csv")
 rep_skinny <- reps |> 
-  select(title:name) |> 
+  # select(title:name) |> 
   mutate(name = str_remove_all(name, " \\(i\\)"))
 
 cross <- read_csv("../000_data_temp/assembly_senate_dist_crosswalk.csv")
@@ -76,10 +76,16 @@ ttf <- tt |>
   left_join(rep_skinny |> 
               filter(title == "Representative") |> 
               select(-title) |> 
+              rename(party_aff_rep = party_aff,
+                     official_phone_rep = official_phone,
+                     official_email_rep = official_email) |> 
               mutate(district = as.character(district)) |> 
               rename("Representative" = name),
             by = c("assembly_district" = "district")) |> 
   left_join(sen_skinny |> 
+              rename(party_aff_sen = party_aff,
+                     official_phone_sen = official_phone,
+                     official_email_sen = official_email) |> 
               mutate(ASM2021 = as.character(ASM2021)),
             by = c("assembly_district" = "ASM2021")) 
 
