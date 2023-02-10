@@ -1,0 +1,269 @@
+﻿school_year,dpi_true_id,student_count,accurate_agency_type,broad_agency_type,zip,physical_address,lat,long,geo_method
+2020-21,3619_0162,539,Instrumentality Charter,District Operated,53215,1712 S 32nd St Milwaukee WI 53215-2104,43.012188,-87.954,census
+2020-21,3619_0413,188,Instrumentality Charter,District Operated,53205,850 W Walnut St Milwaukee WI 53205,43.052578,-87.92191,census
+2020-21,3619_1063,92,Partnership,Independently Operated,53209,3517 W Courtland Ave Milwaukee WI 53209-5919,43.10230615,-87.95738801,osm
+2020-21,3619_0432,60,Partnership,Independently Operated,53209,3517 W Courtland Ave Milwaukee WI 53209-5919,43.10230615,-87.95738801,osm
+2020-21,3619_0410,217,Partnership,Independently Operated,53215,2745 S 13TH St Milwaukee WI 53215,42.994843,-87.92865,census
+2020-21,3619_0454,212,Instrumentality Charter,District Operated,53223,6850 N 53rd St Milwaukee WI 53223-5239,43.141953,-87.97807,census
+2020-21,3619_0334,413,Instrumentality Charter,District Operated,53220,6701 W Eden Pl Milwaukee WI 53220-1335,42.980095,-87.99685,census
+2020-21,3619_0165,283,Instrumentality Charter,District Operated,53221,1420 W Goldcrest Ave Milwaukee WI 53221,42.939346,-87.93127,census
+2020-21,3619_0296,39,Partnership,Independently Operated,53215,2820 W Grant St Milwaukee WI 53215,43.0051168,-87.95019056,osm
+2020-21,3619_1072,92,Partnership,Independently Operated,53206,2320 W Burleigh St Milwaukee WI 53206-1751,43.075146,-87.941414,census
+2020-21,3619_1074,75,Partnership,Independently Operated,53205,1749 N 16th St Milwaukee WI 53205-1624,43.053226,-87.93279,census
+2020-21,3619_1086,17,Partnership,Independently Operated,53212,4200 N Holton St Milwaukee WI 53212,43.09168,-87.90475,census
+2020-21,3619_0398,217,Instrumentality Charter,District Operated,53207,4382 S 3rd St Milwaukee WI 53207-4968,42.96541,-87.9145,census
+2020-21,8123_0100,1363,2r/2x Charter,Independently Operated,53204,1028 S 9th St Milwaukee WI 53204-1335,43.0208,-87.92253,census
+2020-21,8105_1211,474,2r/2x Charter,Independently Operated,53216,4301 N 44th St Milwaukee WI 53216,43.09544,-87.96853,census
+2020-21,8109_0100,256,2r/2x Charter,Independently Operated,53224,7151 N. 86th St. Milwaukee WI 53224,43.147846,-88.01791,census
+2020-21,8101_1056,313,2r/2x Charter,Independently Operated,53207,2507 S Graham St Milwaukee WI 53207-1687,42.99855,-87.903625,census
+2020-21,8127_0400,300,2r/2x Charter,Independently Operated,53216,4030 N 29th St Milwaukee WI 53216,43.090107,-87.94946,census
+2020-21,8131_0400,118,2r/2x Charter,Independently Operated,53215,3628 W Pierce St Milwaukee WI 53215,43.02362,-87.95927,census
+2020-21,3619_0316,703,Traditional Public,District Operated,53220,3727 S 78th St Milwaukee WI 53220-1603,42.97674,-88.01039,census
+2020-21,3619_0075,310,Traditional Public,District Operated,53228,3563 S 97th St Milwaukee WI 53228-1416,42.9801,-88.033806,census
+2020-21,3619_0073,564,Traditional Public,District Operated,53204,730 W Lapham Blvd Milwaukee WI 53204-3428,43.01415,-87.920296,census
+2020-21,3619_0215,243,Traditional Public,District Operated,53206,3620 N 18th St Milwaukee WI 53206-2362,43.082836,-87.933395,census
+2020-21,3619_0434,374,Traditional Public,District Operated,53215,3300 S 39th St Milwaukee WI 53215-4019,42.98468,-87.96305,census
+2020-21,3619_0041,517,Traditional Public,District Operated,53215,3300 S 39th St Milwaukee WI 53215-4019,42.98468,-87.96305,census
+2020-21,3619_0077,183,Traditional Public,District Operated,53206,2319 W Auer Ave Milwaukee WI 53206-1735,43.076916,-87.94138,census
+2020-21,3619_0188,315,Traditional Public,District Operated,53209,4456 N Teutonia Ave Milwaukee WI 53209-6225,43.09801445,-87.94242726,osm
+2020-21,3619_0081,255,Traditional Public,District Operated,53223,5700 W Green Tree Rd Milwaukee WI 53223-5220,43.141266,-87.983154,census
+2020-21,3619_0012,913,Traditional Public,District Operated,53207,2751 S Lenox St Milwaukee WI 53207-2209,42.994686,-87.898056,census
+2020-21,3619_0112,367,Traditional Public,District Operated,53207,357 E Howard Ave Milwaukee WI 53207-3923,42.9734647,-87.90629074,osm
+2020-21,3619_0356,602,Traditional Public,District Operated,53208,1535 N 35th St Milwaukee WI 53208-2315,43.05064,-87.957634,census
+2020-21,3619_0014,1031,Traditional Public,District Operated,53204,700 S Fourth St Milwaukee WI 53204-1760,43.024124,-87.915436,census
+2020-21,3619_0089,309,Traditional Public,District Operated,53205,2029 N 20th St Milwaukee WI 53205-1140,43.056843,-87.93766,census
+2020-21,3619_0092,321,Traditional Public,District Operated,53218,5440 N 64th St Milwaukee WI 53218-3020,43.117386,-87.99104,census
+2020-21,3619_0093,252,Traditional Public,District Operated,53224,6453 N 89th St Milwaukee WI 53224-5307,43.135525,-88.02296,census
+2020-21,3619_0094,206,Traditional Public,District Operated,53225,8718 W Thurston Ave Milwaukee WI 53225-2829,43.120525,-88.02126,census
+2020-21,3619_0095,602,Traditional Public,District Operated,53214,6035 W Adler St Milwaukee WI 53214-1835,43.0272022,-87.98839027,osm
+2020-21,3619_0098,619,Traditional Public,District Operated,53207,4348 S Griffin Ave Milwaukee WI 53207-5026,42.9654,-87.90472,census
+2020-21,3619_0407,368,Non-Instrumentality Charter,Independently Operated,53215,1712 S 32nd St Milwaukee WI 53215-2104,43.012188,-87.954,census
+2020-21,3619_0451,726,Non-Instrumentality Charter,Independently Operated,53215,2500 W Oklahoma Ave Milwaukee WI 53215-4437,42.9897536,-87.94522669,osm
+2020-21,3619_0213,148,Non-Instrumentality Charter,Independently Operated,53215,1236 S Layton Blvd Milwaukee WI 53215-1653,43.018593,-87.947716,census
+2020-21,3619_0444,670,Non-Instrumentality Charter,Independently Operated,53218,5496 N 72nd St Milwaukee WI 53218-2820,43.1169,-88.00115,census
+2020-21,3619_0108,458,Traditional Public,District Operated,53216,4920 W Capitol Dr Milwaukee WI 53216-2321,43.08995,-87.975006,census
+2020-21,3619_0178,486,Traditional Public,District Operated,53212,1900 N 1st St Milwaukee WI 53212-3705,43.055256,-87.91124,census
+2020-21,3619_0104,366,Traditional Public,District Operated,53202,1647 N Cass St Milwaukee WI 53202-2026,43.052197,-87.90215,census
+2020-21,3619_0110,265,Traditional Public,District Operated,53210,2816 W Clarke St Milwaukee WI 53210-2621,43.066044,-87.948944,census
+2020-21,3619_0114,340,Traditional Public,District Operated,53216,3600 W Hope Ave Milwaukee WI 53216-1761,43.093483,-87.95845,census
+2020-21,3619_0113,406,Traditional Public,District Operated,53207,3666 S Clement Ave Milwaukee WI 53207-3566,42.977512,-87.894455,census
+2020-21,3619_0116,769,Traditional Public,District Operated,53218,5225 W Lincoln Creek Dr Milwaukee WI 53218-5721,43.099464,-87.9785,census
+2020-21,3619_0117,474,Traditional Public,District Operated,53221,5143 S 21st St Milwaukee WI 53221-3533,42.951267,-87.94035,census
+2020-21,3619_0501,307,Traditional Public,District Operated,53218,7667 W Congress St Milwaukee WI 53218-5349,43.097195,-88.00796,census
+2020-21,3619_0122,331,Traditional Public,District Operated,53215,3450 S 32nd St Milwaukee WI 53215-4204,42.982067,-87.95448,census
+2020-21,3619_0820,192,Non-Instrumentality Charter,Independently Operated,53209,4834 N Mother Daniels Way Milwaukee WI 53209-5981,43.105293,-87.95656,census
+2020-21,3619_0125,568,Traditional Public,District Operated,53215,3014 W Scott St Milwaukee WI 53215-1643,43.019066,-87.95171,census
+2020-21,3619_0143,366,Traditional Public,District Operated,53222,2964 N 81st St Milwaukee WI 53222-4808,43.07277,-88.01366,census
+2020-21,3619_0148,300,Traditional Public,District Operated,53205,900 W Walnut St Milwaukee WI 53205-1761,43.05259,-87.923035,census
+2020-21,3619_0150,232,Traditional Public,District Operated,53225,9025 W Lawrence Ave Milwaukee WI 53225-5038,43.09791,-88.0255,census
+2020-21,3619_0152,306,Traditional Public,District Operated,53225,5100 N 91st St Milwaukee WI 53225-4131,43.110767,-88.02593,census
+2020-21,3619_0155,659,Traditional Public,District Operated,53219,6500 W Kinnickinnic River Pkwy Milwaukee WI 53219-3030,42.990532,-87.99401,census
+2020-21,3619_0158,794,Traditional Public,District Operated,53207,3239 S Pennsylvania Ave Milwaukee WI 53207-3131,42.9858406,-87.88082477,osm
+2020-21,3619_0170,410,Traditional Public,District Operated,53216,3618 N 53rd St Milwaukee WI 53216-2952,43.08366,-87.979675,census
+2020-21,3619_0173,685,Traditional Public,District Operated,53204,1516 W Forest Home Ave Milwaukee WI 53204-3256,43.0112985,-87.93149249,osm
+2020-21,3619_0179,386,Traditional Public,District Operated,53206,2308 W Nash St Milwaukee WI 53206-1830,43.084633,-87.941216,census
+2020-21,3619_0182,467,Traditional Public,District Operated,53212,3255 N Fratney St Milwaukee WI 53212-2240,43.07756,-87.90142,census
+2020-21,3619_0185,759,Traditional Public,District Operated,53212,1250 E Burleigh St Milwaukee WI 53212-2217,43.07471,-87.89548,census
+2020-21,3619_0191,593,Traditional Public,District Operated,53221,3120 W Green Ave Milwaukee WI 53221-4178,42.93975,-87.95398,census
+2020-21,3619_0192,362,Traditional Public,District Operated,53224,8251 N Celina St Milwaukee WI 53224-2713,43.16724,-88.037186,census
+2020-21,3619_0193,602,Traditional Public,District Operated,53215,2920 W Grant St Milwaukee WI 53215-2446,43.004913,-87.95082,census
+2020-21,3619_0115,81,Traditional Public,District Operated,53206,921 W Meinecke Ave Milwaukee WI 53206-3137,43.062153,-87.923065,census
+2020-21,3619_0196,588,Traditional Public,District Operated,53218,4850 N 82nd St Milwaukee WI 53218-3604,43.10643,-88.01357,census
+2020-21,3619_0202,648,Traditional Public,District Operated,53215,1711 S 35th St Milwaukee WI 53215-2004,43.01177125,-87.95829489,osm
+2020-21,3619_0236,135,Traditional Public,District Operated,53208,1312 N 27th St Milwaukee WI 53208-2408,43.047504,-87.94776,census
+2020-21,3619_0018,1491,Traditional Public,District Operated,53220,6215 W Warnimont Ave Milwaukee WI 53220-1322,42.979126,-87.99086,census
+2020-21,3619_0205,223,Traditional Public,District Operated,53218,5000 N 53rd St Milwaukee WI 53218-4333,43.108646,-87.978836,census
+2020-21,3619_0880,1807,Non-Instrumentality Charter,Independently Operated,53225,4601 N 84th St Milwaukee WI 53225-4958,43.10081,-88.01731,census
+2020-21,3619_0208,517,Traditional Public,District Operated,53211,2227 E Hartford Ave Milwaukee WI 53211-3101,43.07765,-87.88216,census
+2020-21,3619_0211,371,Traditional Public,District Operated,53213,5610 W Wisconsin Ave Milwaukee WI 53213-4258,43.0393171,-87.98310112,osm
+2020-21,3619_0212,296,Traditional Public,District Operated,53209,6945 N 41st St Milwaukee WI 53209-2204,43.14374,-87.96316,census
+2020-21,3619_0214,626,Traditional Public,District Operated,53204,971 W Windlake Ave Milwaukee WI 53204-3822,43.008617,-87.923615,census
+2020-21,3619_0217,198,Traditional Public,District Operated,53208,4921 W Garfield Ave Milwaukee WI 53208-1109,43.05927,-87.97507,census
+2020-21,3619_0852,416,Non-Instrumentality Charter,Independently Operated,53233,1706 W Highland Ave Milwaukee WI 53233-1198,43.044342,-87.93417,census
+2020-21,3619_0218,284,Traditional Public,District Operated,53212,2463 N Buffum St Milwaukee WI 53212-2901,43.06318,-87.90659,census
+2020-21,3619_0253,153,Traditional Public,District Operated,53206,1503 W Hopkins St Milwaukee WI 53206-2165,43.07141,-87.93187,census
+2020-21,3619_0223,642,Traditional Public,District Operated,53207,3230 S Adams Ave Milwaukee WI 53207-2706,42.985897,-87.90289,census
+2020-21,3619_0377,297,Traditional Public,District Operated,53206,2121 W Hadley St Milwaukee WI 53206-1620,43.069637,-87.93902,census
+2020-21,3619_0409,674,Traditional Public,District Operated,53218,8135 W Florist Ave Milwaukee WI 53218-1745,43.126846,-88.01257,census
+2020-21,3619_0232,240,Traditional Public,District Operated,53204,1210 W Mineral St Milwaukee WI 53204-2132,43.02115,-87.927055,census
+2020-21,3619_0235,198,Traditional Public,District Operated,53206,1618 W Keefe Ave Milwaukee WI 53206-2359,43.081753,-87.93129,census
+2020-21,3619_0237,289,Traditional Public,District Operated,53218,5354 N 68th St Milwaukee WI 53218-2901,43.115147,-87.99621,census
+2020-21,3619_0020,1477,Traditional Public,District Operated,53209,1801 W Olive St Milwaukee WI 53209-6840,43.093903,-87.93253,census
+2020-21,3619_0210,383,Traditional Public,District Operated,53212,121 E Hadley St Milwaukee WI 53212,43.0684998,-87.91032455,osm
+2020-21,3619_0199,268,Traditional Public,District Operated,53212,3275 N 3rd St Milwaukee WI 53212-2064,43.077675,-87.91391,census
+2020-21,3619_0337,390,Traditional Public,District Operated,53218,5760 N 67th St Milwaukee WI 53218-2307,43.122395,-87.99471,census
+2020-21,3619_1121,736,Non-Instrumentality Charter,Independently Operated,53204,1643 S 2nd St Milwaukee WI 53204-2905,43.01333,-87.91259,census
+2020-21,3619_0238,240,Traditional Public,District Operated,53206,3239 N 9th St Milwaukee WI 53206-3251,43.07691305,-87.92309231,osm
+2020-21,3619_0241,377,Traditional Public,District Operated,53218,4931 N 68th St Milwaukee WI 53218-3905,43.10775,-87.99618,census
+2020-21,3619_0250,505,Traditional Public,District Operated,53215,1817 W Lincoln Ave Milwaukee WI 53215-2650,43.002968,-87.93584,census
+2020-21,3619_0006,621,Traditional Public,District Operated,53202,820 E Knapp St Milwaukee WI 53202-2718,43.04693,-87.90192,census
+2020-21,3619_0256,823,Traditional Public,District Operated,53204,1021 S 21st St Milwaukee WI 53204-2030,43.0208,-87.93948,census
+2020-21,3619_0257,226,Traditional Public,District Operated,53221,4360 S 20th St Milwaukee WI 53221-2367,42.96554,-87.938934,census
+2020-21,3619_0870,862,Traditional Public,District Operated,53213,6415 W Mount Vernon Ave Milwaukee WI 53213-4025,43.033905,-87.99241,census
+2020-21,3619_0265,455,Traditional Public,District Operated,53215,4040 W Forest Home Ave Milwaukee WI 53215-3538,42.990868,-87.96503,census
+2020-21,3619_0267,246,Traditional Public,District Operated,53224,6644 N 107th St Milwaukee WI 53224-5006,43.138245,-88.04521,census
+2020-21,3619_0008,1049,Traditional Public,District Operated,53216,4141 N 64th St Milwaukee WI 53216-1149,43.092613,-87.99201,census
+2020-21,3619_0268,492,Traditional Public,District Operated,53211,2418 N Maryland Ave Milwaukee WI 53211-4438,43.06431,-87.88305,census
+2020-21,3619_0176,1201,Traditional Public,District Operated,53212,1615 N Martin Luther King Dr Milwaukee WI 53212,43.051468,-87.914314,census
+2020-21,3619_0525,346,Traditional Public,District Operated,53208,3400 W North Ave Milwaukee WI 53208-1448,43.060623,-87.956436,census
+2020-21,3619_0103,471,Traditional Public,District Operated,53233,2430 W Wisconsin Ave Milwaukee WI 53233-1828,43.038696,-87.943596,census
+2020-21,3619_0123,506,Non-Instrumentality Charter,Independently Operated,53210,2449 N 36th St Milwaukee WI 53210-3040,43.06335,-87.958694,census
+2020-21,3619_0111,510,Non-Instrumentality Charter,Independently Operated,53210,2623 N 38th St Milwaukee WI 53210-2502,43.06657,-87.96103,census
+2020-21,3619_0145,496,Non-Instrumentality Charter,Independently Operated,53205,1228 W Lloyd St Milwaukee WI 53205-1243,43.057873,-87.927414,census
+2020-21,3619_0121,487,Non-Instrumentality Charter,Independently Operated,53205,1350 W North Ave Milwaukee WI 53205-1257,43.060413,-87.92939,census
+2020-21,3619_0315,21,Traditional Public,District Operated,53233,949 N 9th St Milwaukee WI 53233-1422,43.042374,-87.92304,census
+2020-21,3619_0118,417,Non-Instrumentality Charter,Independently Operated,53216,6600 W Melvina St Milwaukee WI 53216-2004,43.088097,-87.994736,census
+2020-21,3619_0885,434,Non-Instrumentality Charter,Independently Operated,53209,4950 N 24th St Milwaukee WI 53209-5663,43.10748,-87.941605,census
+2020-21,3619_0140,640,Traditional Public,District Operated,53210,2360 N 52nd St Milwaukee WI 53210-2701,43.06176,-87.97873,census
+2020-21,3619_0146,595,Traditional Public,District Operated,53222,3778 N 82nd St Milwaukee WI 53222-2999,43.08575,-88.01503,census
+2020-21,3619_0038,937,Traditional Public,District Operated,53233,2300 W Highland Ave Milwaukee WI 53233-1007,43.04435,-87.94166,census
+2020-21,3619_0362,853,Traditional Public,District Operated,53207,2969 S Howell Ave Milwaukee WI 53207-2083,42.990807,-87.90436,census
+2020-21,3619_0071,1146,Traditional Public,District Operated,53222,8400 W Burleigh St Milwaukee WI 53222-3717,43.07521,-88.01757,census
+2020-21,3619_0226,577,Traditional Public,District Operated,53223,7900 W Acacia St Milwaukee WI 53223-5623,43.137814,-88.00895,census
+2020-21,3619_0167,740,Traditional Public,District Operated,53219,2765 S 55th St Milwaukee WI 53219-3269,42.994503,-87.982704,census
+2020-21,3619_0274,673,Traditional Public,District Operated,53204,1728 S 23rd St Milwaukee WI 53204-3009,43.012062,-87.94229,census
+2020-21,3619_0277,590,Traditional Public,District Operated,53221,3635 S 17th St Milwaukee WI 53221-1651,42.978733,-87.93513,census
+2020-21,3619_0052,430,Traditional Public,District Operated,53223,6700 N 80th St Milwaukee WI 53223,43.139484,-88.01056,census
+2020-21,3619_0283,381,Traditional Public,District Operated,53208,1601 N Hawley Rd Milwaukee WI 53208-2116,43.051489,-87.982651,osm
+2020-21,3619_1141,221,Non-Instrumentality Charter,Independently Operated,53210,2545 N 29th St Milwaukee WI 53210-3116,43.06508,-87.94993,census
+2020-21,3619_0289,437,Traditional Public,District Operated,53222,3707 N 94th St Milwaukee WI 53222-2613,43.083958,-88.02996,census
+2020-21,3619_0419,357,Traditional Public,District Operated,53206,1011 W Center St Milwaukee WI 53206-3262,43.06763,-87.92428,census
+2020-21,3619_0840,641,Traditional Public,District Operated,53209,5075 N Sherman Blvd Milwaukee WI 53209-5246,43.10960025,-87.96838709,osm
+2020-21,3619_0301,386,Traditional Public,District Operated,53225,10825 W Villard Ave Milwaukee WI 53225-3834,43.112114,-88.04765,census
+2020-21,3619_0325,286,Traditional Public,District Operated,53209,5131 N Green Bay Ave Milwaukee WI 53209-5753,43.11048,-87.93282,census
+2020-21,3619_0458,246,Traditional Public,District Operated,53233,609 N 8th St Milwaukee WI 53233-2405,43.03766,-87.92185,census
+2020-21,3619_0026,859,Traditional Public,District Operated,53215,2500 W Oklahoma Ave Milwaukee WI 53215-4437,42.988518,-87.94515,census
+2020-21,3619_0435,1346,Traditional Public,District Operated,53221,4965 S 20th St Milwaukee WI 53221-2860,42.954685,-87.93904,census
+2020-21,3619_0313,407,Traditional Public,District Operated,53207,2424 S 4th St Milwaukee WI 53207-1411,43.001377,-87.91551,census
+2020-21,3619_0194,374,Traditional Public,District Operated,53225,12021 W Florist Ave Milwaukee WI 53225-2119,43.126385,-88.06137,census
+2020-21,3619_0029,1501,Traditional Public,District Operated,53211,1615 E Locust St Milwaukee WI 53211-3222,43.071064,-87.89107,census
+2020-21,3619_0307,340,Traditional Public,District Operated,53212,2765 N Fratney St Milwaukee WI 53212-2607,43.068645,-87.901566,census
+2020-21,3619_0177,643,Traditional Public,District Operated,53204,2430 W Rogers St Milwaukee WI 53204-3655,43.008556,-87.94424,census
+2020-21,3619_0059,371,Traditional Public,District Operated,53205,800 W Walnut St Milwaukee WI 53205-1717,43.052574,-87.92099,census
+2020-21,3619_0319,314,Traditional Public,District Operated,53210,5110 W Locust St Milwaukee WI 53210-1626,43.071632,-87.97761,census
+2020-21,3619_0107,302,Traditional Public,District Operated,53205,1547 N 14th St Milwaukee WI 53205-2109,43.050594,-87.93003,census
+2020-21,3619_0442,36,Traditional Public,District Operated,53204,1515 W Lapham Blvd Milwaukee WI 53204-3236,43.01432873,-87.93121181,osm
+2020-21,3619_0032,815,Traditional Public,District Operated,53204,1515 W Lapham Blvd Milwaukee WI 53204-3236,43.01432873,-87.93121181,osm
+2020-21,3619_0312,282,Traditional Public,District Operated,53205,2035 N 25th St Milwaukee WI 53205-1000,43.05688,-87.94509,census
+2020-21,3619_0149,278,Traditional Public,District Operated,53205,2616 W Garfield Ave Milwaukee WI 53205-1042,43.059185,-87.94656,census
+2020-21,3619_0343,412,Traditional Public,District Operated,53208,3815 W Kilbourn Ave Milwaukee WI 53208-3113,43.041668,-87.961655,census
+2020-21,3619_0344,306,Traditional Public,District Operated,53224,7001 N 86th St Milwaukee WI 53224-4841,43.14474933,-88.01784878,osm
+2020-21,3619_0360,432,Traditional Public,District Operated,53223,7878 N 60th St Milwaukee WI 53223-4109,43.16098,-87.984924,census
+2020-21,3619_0154,442,Traditional Public,District Operated,53209,5966 N 35th St Milwaukee WI 53209-4055,43.12586,-87.95612,census
+2020-21,3619_0365,351,Traditional Public,District Operated,53216,3360 N Sherman Blvd Milwaukee WI 53216-3559,43.080414,-87.96726,census
+2020-21,3619_0433,169,Traditional Public,District Operated,53208,1940 N 36th St Milwaukee WI 53208-1927,43.055504,-87.95876,census
+2020-21,3619_0368,236,Traditional Public,District Operated,53207,1943 E Trowbridge St Milwaukee WI 53207-2564,42.992126,-87.8856,census
+2020-21,3619_0387,568,Traditional Public,District Operated,53221,2222 W Henry Ave Milwaukee WI 53221-4920,42.936268,-87.94214,census
+2020-21,3619_0390,745,Traditional Public,District Operated,53204,823 S 4th St Milwaukee WI 53204-1724,43.02293,-87.91544,census
+2020-21,3619_0448,63,Traditional Public,District Operated,53224,7501 N Granville Rd Milwaukee WI 53224-3927,43.15402,-88.02854,census
+2020-21,3619_0033,764,Traditional Public,District Operated,53224,7501 N Granville Rd Milwaukee WI 53224-3927,43.15402,-88.02854,census
+2020-21,3619_0204,891,Traditional Public,District Operated,53220,6506 W Warnimont Ave Milwaukee WI 53220-1344,42.978813,-87.99482,census
+2020-21,3619_0130,220,Traditional Public,District Operated,53208,1940 N 36th St Milwaukee WI 53208-1927,43.055504,-87.95876,census
+2020-21,3619_0397,417,Traditional Public,District Operated,53220,4200 S 54th St Milwaukee WI 53220-3111,42.968437,-87.982666,census
+2020-21,3619_0424,606,Traditional Public,District Operated,53210,2525 N Sherman Blvd Milwaukee WI 53210-2949,43.06478,-87.96752,census
+2020-21,3619_0399,408,Traditional Public,District Operated,53233,1017 N 12th St Milwaukee WI 53233-1307,43.04346,-87.92716,census
+2020-21,3619_0295,340,Traditional Public,District Operated,53215,1016 W Oklahoma Ave Milwaukee WI 53215-4746,42.988277,-87.92542,census
+2020-21,8106_1251,1220,2r/2x Charter,Independently Operated,53233,2000 W Kilbourn Ave Milwaukee WI 53233,43.041615,-87.93798,census
+2020-21,8128_0800,222,2r/2x Charter,Independently Operated,53212,110 W Burleigh St Milwaukee WI 53212,43.074858,-87.91128245,osm
+2020-21,8129_0100,707,2r/2x Charter,Independently Operated,53218,7000 W Florist Ave Milwaukee WI 53218,43.126793,-87.99854,census
+2020-21,8139_8139,111,2r/2x Charter,Independently Operated,53212,336 W Walnut St Milwaukee WI 53212-3847,43.052563,-87.91489,census
+2020-21,8138_8138,120,2r/2x Charter,Independently Operated,53205,1441 N 24th St Milwaukee WI 53205-1803,43.04923,-87.94281,census
+2020-21,8002_8133,523,2r/2x Charter,Independently Operated,53215,3003 W Cleveland Ave Milwaukee WI 53215,42.995834,-87.95241,census
+2020-21,8002_8140,146,2r/2x Charter,Independently Operated,53218,5460 N 64th St Milwaukee WI 53218-3020,43.11773,-87.99105,census
+2020-21,8001_8121,424,2r/2x Charter,Independently Operated,53215,1445 S 32nd St Milwaukee WI 53215-1903,43.01557,-87.95392,census
+2020-21,8001_8115,234,2r/2x Charter,Independently Operated,53202,840 N Jackson St Milwaukee WI 53202,43.041897,-87.90432,census
+2020-21,8001_8124,254,2r/2x Charter,Independently Operated,53215,3025 W Oklahoma Ave Milwaukee WI 53215-4347,42.98860118,-87.9526385,osm
+2020-21,8136_8136,190,2r/2x Charter,Independently Operated,53215,2431 S 10th St Milwaukee WI 53215,43.000557,-87.92489,census
+2020-21,8137_8137,178,2r/2x Charter,Independently Operated,53204,615 W Washington St Milwaukee WI 53204-2309,43.020126,-87.91911,census
+2020-21,8113_8728,350,2r/2x Charter,Independently Operated,53208,5510 W Bluemound Rd Milwaukee WI 53208-3012,43.03662,-87.98257,census
+2020-21,8132_0100,345,2r/2x Charter,Independently Operated,53208,3121 W State St Milwaukee WI 53208-3494,43.04325,-87.95366,census
+2020-21,0000_0309,187,Private,Private,53202,"2038 N Bartlett Ave, Milwaukee, WI 53202",43.058315,-87.890274,census
+2020-21,0000_0320,70,Private,Private,53221,3545 S 23rd St Milwaukee WI 53221-1411,42.98041,-87.9435,census
+2020-21,0000_0510,117,Private,Private,53222,4257 N 100th St Milwaukee WI 53222-1391,43.094273,-88.03768,census
+2020-21,0000_0740,258,Private,Private,53209,2450 W Roosevelt Dr Milwaukee WI 53209-6659,43.09519,-87.94358,census
+2020-21,0000_1044,200,Private,Private,53212,317 W Wright St Milwaukee WI 53212-2729,43.06384247,-87.91446361,osm
+2020-21,0000_1048,194,Private,Private,53202,1150 E Brady St Milwaukee WI 53202,43.05296,-87.89745,census
+2020-21,0000_1095,498,Private,Private,53204,1420 W Scott St Milwaukee WI 53204-2269,43.019096,-87.9296,census
+2020-21,0000_1158,332,Private,Private,53223,7132 W Good Hope Rd Milwaukee WI 53223-4611,43.14865,-87.99884,census
+2020-21,0000_1165,263,Private,Private,53224,8242 N Granville Rd Milwaukee WI 53224-2754,43.165905,-88.03381,census
+2020-21,0000_1180,345,Private,Private,53209,3500 W Mother Daniels Way Milwaukee WI 53209-5311,43.10642,-87.95664,census
+2020-21,0000_1200,336,Private,Private,53215,2251 S 31st St Milwaukee WI 53215-2494,43.00396,-87.95295,census
+2020-21,0000_1205,410,Private,Private,53204,1114 S 25th St Milwaukee WI 53204-1940,43.019966,-87.94501,census
+2020-21,0000_1218,218,Private,Private,53209,5375 N Green Bay Ave Milwaukee WI 53209,43.11481978,-87.93403556,osm
+2020-21,0000_1221,201,Private,Private,53223,"7798 N 60th St, Milwaukee, WI 53223",43.159786,-87.98497,census
+2020-21,0000_1253,211,Private,Private,53219,6021 W Lincoln Ave West Allis WI 53219-2152,43.00285136,-87.98783684,osm
+2020-21,0000_1263,607,Private,Private,53207,1039 E Russell Ave Milwaukee WI 53207-1820,42.99562,-87.89657,census
+2020-21,0000_1301,396,Private,Private,53209,4224 W Ruby Ave Milwaukee WI 53209-5850,43.098957,-87.96567,census
+2020-21,0000_1302,145,Private,Private,53212,3012 N Holton St Milwaukee WI 53212-2123,43.07328,-87.905235,census
+2020-21,0000_1303,229,Private,Private,53209,4065 N 25th St Milwaukee WI 53209-6611,43.09085,-87.9447,census
+2020-21,0000_1304,160,Private,Private,53215,"3126 S 41st St, Milwaukee, WI 53215",42.98779,-87.96542,census
+2020-21,0000_1305,207,Private,Private,53204,"2229 W Greenfield Ave, Milwaukee, WI 53204",43.01702,-87.941315,census
+2020-21,0000_1315,573,Private,Private,53206,"2345 N 25th St, Milwaukee, WI 53206",43.06142,-87.94503,census
+2020-21,0000_1327,146,Private,Private,53224,10201 W Bradley Rd Milwaukee WI 53224,43.163017,-88.038055,census
+2020-21,0000_1345,567,Private,Private,53218,5575 N 76th St Milwaukee WI 53218-2792,43.11837,-88.00601,census
+2020-21,0000_1351,229,Private,Private,53224,9550 W Brown Deer Rd Milwaukee WI 53224,43.177776,-88.02936,census
+2020-21,0000_1374,98,Private,Private,53212,125 W Auer Ave Milwaukee WI 53212,43.0760352,-87.91175984,osm
+2020-21,0000_1382,355,Private,Private,53209,5268 N 35th St Milwaukee WI 53209,43.113167,-87.956406,census
+2020-21,0000_1384,69,Private,Private,53206,3965 N 15th St Milwaukee WI 53206-2916,43.08881,-87.92959,census
+2020-21,0000_1408,261,Private,Private,53212,"3215 N Doctor M.L.K. Jr Dr, Milwaukee, WI 53212",43.076984,-87.91513,census
+2020-21,0000_1439,495,Private,Private,53212,"3601 N Port Washington Ave, Milwaukee, WI 53212",43.0832881,-87.91747979,osm
+2020-21,0000_1489,367,Private,Private,53206,1530 W Center St Milwaukee WI 53206-2101,43.067734,-87.93228,census
+2020-21,0000_1491,253,Private,Private,53223,7210 N 76th St Milwaukee WI 53223,43.1491,-88.00524,census
+2020-21,0000_1507,487,Private,Private,53218,5140 N 55th St Milwaukee WI 53218,43.110844,-87.981255,census
+2020-21,0000_1527,316,Private,Private,53224,8940 N 85th St Milwaukee WI 53224-2104,43.180885,-88.01567,census
+2020-21,0000_1530,78,Private,Private,53223,8684 N 76th Pl Milwaukee WI 53223,43.176735,-88.00436,census
+2020-21,0000_1575,163,Private,Private,53209,"7140 N 41st St, Milwaukee, WI 53209",43.14744373,-87.96292685,osm
+2020-21,0000_1606,1343,Private,Private,53206,742 W Capitol Dr Milwaukee WI 53206-3327,43.089336,-87.920395,census
+2020-21,0000_1627,19,Private,Private,53233,2020 W Wells St Milwaukee WI 53233,43.04025,-87.938255,census
+2020-21,0000_1631,112,Private,Private,53215,"1127 S 35th St, Milwaukee, WI 53215",43.019745,-87.95772,census
+2020-21,0000_1652,860,Private,Private,53204,633 S 12th St Milwaukee WI 53204-1210,43.02511,-87.92674,census
+2020-21,0000_1656,418,Private,Private,53216,"3040 W Capitol Dr, Milwaukee, WI 53216",43.089832,-87.95121,census
+2020-21,0000_1684,40,Private,Private,53208,4827 W North Ave Milwaukee WI 53208,43.060635,-87.97391,census
+2020-21,0000_1702,125,Private,Private,53206,3782 N 12th St Milwaukee WI 53206,43.08626,-87.925934,census
+2020-21,0000_1703,493,Private,Private,53224,"8920 W Brown Deer Rd, Milwaukee, WI 53224",43.17864585,-88.02254656,osm
+2020-21,0000_1704,421,Private,Private,53222,4050 N 95th St Milwaukee WI 53222-1519,43.091106,-88.03146,census
+2020-21,0000_1712,368,Private,Private,53214,"1215 S 45th St, West Milwaukee, WI 53214",43.0187329,-87.9706619,osm
+2020-21,0000_1729,483,Private,Private,53209,"4200 W Douglas Ave, Milwaukee, WI 53209",43.130615,-87.96404,census
+2020-21,0000_1743,23,Private,Private,53233,2224 W Kilbourn Ave Milwaukee WI 53233-1614,43.041622,-87.940796,census
+2020-21,0000_1745,1287,Private,Private,53207,2607 S 5th St Milwaukee WI 53207-1418,42.99659595,-87.91704988,osm
+2020-21,0000_1770,117,Private,Private,53208,"3401 W Wisconsin Ave, Milwaukee, WI 53208",43.038757,-87.95694,census
+2020-21,0000_1774,96,Private,Private,53213,2520 N Wauwatosa Ave Wauwatosa WI 53213-1135,43.064945,-88.00745,census
+2020-21,0000_1776,160,Private,Private,53223,8684 N 76th Pl Milwaukee WI 53223-2632,43.176735,-88.00436,census
+2020-21,0000_1870,773,Private,Private,53222,"9700 W Grantosa Dr, Milwaukee, WI 53222",43.095345,-88.03365,census
+2020-21,0000_1873,181,Private,Private,53225,"10900 W Mill Rd, Milwaukee, WI 53225",43.13383,-88.04755,census
+2020-21,0000_1910,213,Private,Private,53210,3001 N 68th St Milwaukee WI 53210-1299,43.073605,-87.99734,census
+2020-21,0000_1930,182,Private,Private,53210,2862 N 53rd St Milwaukee WI 53210-1692,43.07095,-87.97979,census
+2020-21,0000_1980,231,Private,Private,53218,6100 W Hampton Ave Milwaukee WI 53218-4990,43.104713,-87.98674,census
+2020-21,0000_1990,140,Private,Private,53208,5301 W Washington Blvd Milwaukee WI 53208-1797,43.052933,-87.98005,census
+2020-21,0000_1996,234,Private,Private,53215,1515 S 29th St Milwaukee WI 53215-1912,43.015606,-87.95031,census
+2020-21,0000_2030,238,Private,Private,53222,4119 N 81st St Milwaukee WI 53222-1979,43.091137,-88.01388,census
+2020-21,0000_2240,140,Private,Private,53215,2733 W Euclid Ave Milwaukee WI 53215-4396,42.986618,-87.94865,census
+2020-21,0000_2291,227,Private,Private,53210,6717 W Center St Wauwatosa WI 53210-1254,43.068027,-87.99647,census
+2020-21,0000_2300,444,Private,Private,53213,135 N 76th St Milwaukee WI 53213-3597,43.03177,-88.00729,census
+2020-21,0000_2750,411,Private,Private,53215,1913 W Becher St Milwaukee WI 53215-2611,43.006607,-87.93704,census
+2020-21,0000_2850,285,Private,Private,53215,3329 S 10th Street Milwaukee WI 53215,42.98411,-87.92525,census
+2020-21,0000_3100,1593,Private,Private,53204,"1727 s 9th st Milwaukee, WI 53204",43.011906,-87.92272,census
+2020-21,0000_3160,161,Private,Private,53213,"201 N 76th St, Milwaukee, WI 53213",43.032475,-88.007286,census
+2020-21,0000_3410,122,Private,Private,53210,2647 N 51st St Milwaukee WI 53210-2399,43.067013,-87.97749,census
+2020-21,0000_3455,120,Private,Private,53221,3100 W Parnell Ave Milwaukee WI 53221-4047,42.941772,-87.954506,census
+2020-21,0000_3580,31,Private,Private,53208,1740 N 55th St Milwaukee WI 53208-1664,43.053513,-87.98195,census
+2020-21,0000_3935,195,Private,Private,53219,3132 S 63rd St Milwaukee WI 53219-4113,42.98805,-87.990005,census
+2020-21,0000_4210,143,Private,Private,53202,1341 N Cass St Milwaukee WI 53202-2796,43.047447,-87.90224,census
+2020-21,0000_4655,192,Private,Private,53220,4001 S 68th St Milwaukee WI 53220-2423,42.97212,-87.99803,census
+2020-21,0000_4950,172,Private,Private,53215,"801 W Lincoln Ave, Milwaukee, WI 53215",43.00263325,-87.92161018,osm
+2020-21,0000_5640,104,Private,Private,53207,648 E Dover St Milwaukee WI 53207,42.99715,-87.90176,census
+2020-21,0000_5710,827,Private,Private,53212,"2215 N Palmer St, Milwaukee, WI 53212",43.05931,-87.90968,census
+2020-21,0000_5720,133,Private,Private,53222,3950 N 92nd St Milwaukee WI 53222-2587,43.089,-88.0277,census
+2020-21,0000_5830,171,Private,Private,53204,1520 S Cesar E Chavez Dr Milwaukee WI 53204-2715,43.01503,-87.93297,census
+2020-21,0000_6690,115,Private,Private,53227,9300 W Beloit Rd Milwaukee WI 53227-4313,42.985504,-88.02929,census
+2020-21,0000_7400,105,Private,Private,53223,7801 W Acacia St Milwaukee WI 53223-5698,43.13781,-88.007095,census
+2020-21,0000_7670,284,Private,Private,53221,"1810 W Bolivar Ave, Milwaukee, WI 53221",42.96659,-87.936615,census
+2020-21,0000_7720,222,Private,Private,53208,1747 N 54th St Milwaukee WI 53208-1657,43.053574,-87.980965,census
+2020-21,0000_7980,142,Private,Private,53207,341 E Norwich St Milwaukee WI 53207-4491,42.971928,-87.9062,census
+2020-21,0000_8379,NA,Private,Private,53209,6800 N Green Bay Ave Milwaukee WI,43.140913,-87.933117,osm
+2020-21,0000_8075,NA,Private,Private,53221,4707 S 13th St Milwaukee WI,42.95898,-87.92922,census
+2020-21,0000_8080,NA,Private,Private,53224,6810 N 107th St Milwaukee WI,43.14126,-88.045166,census
+2020-21,0000_8217,NA,Private,Private,53206,3721 N 21st St Milwaukee WI,43.084946,-87.938416,census
+2020-21,0000_8224,NA,Private,Private,53215,3027 S 16th St Milwaukee WI,42.989635,-87.933815,census
+2020-21,0000_8720,NA,Private,Private,53213,330 N Glenview Ave Milwaukee WI,43.03448,-88.016594,census
+2020-21,0000_8740,NA,Private,Private,53216,5115 W Keefe Ave Milwaukee WI,43.082565,-87.97756,census
