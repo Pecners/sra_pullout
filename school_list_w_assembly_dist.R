@@ -10,7 +10,7 @@ rep_skinny <- reps |>
   # select(title:name) |> 
   mutate(name = str_remove_all(name, " \\(i\\)"))
 
-cross <- read_csv("../000_data_temp/assembly_senate_dist_crosswalk.csv")
+cross <- read_csv("data/assembly_senate_dist_crosswalk.csv")
 
 sen_skinny <- left_join(rep_skinny |> 
                           filter(title == "Senator"),
@@ -18,7 +18,7 @@ sen_skinny <- left_join(rep_skinny |>
   
 
 
-geo_schools <- read_csv("../000_data_temp/geocoded_mke_schools.csv") %>%
+geo_schools <- read_csv("data/geocoded_mke_schools.csv") %>%
   mutate(dpi_true_id = ifelse(dpi_true_id == "3619_0213",
                               "8152_8152", dpi_true_id)) |> 
   select(-student_count) %>%
@@ -90,6 +90,9 @@ ttf <- tt |>
             by = c("assembly_district" = "ASM2021")) 
 
 glimpse(ttf)
+
+saveRDS(ttf, "data/full.rda")
+saveRDS(ttf, "../school_reps_shiny/full.rda")
 
 ttf |> 
   mutate_at(c("assembly_district", "district"), as.numeric) |> 
