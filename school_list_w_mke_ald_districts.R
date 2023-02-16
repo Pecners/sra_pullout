@@ -83,7 +83,7 @@ glimpse(ttf)
 saveRDS(ttf, "data/city_council.rda")
 saveRDS(ttf, "../school_reps_shiny/city_council.rda")
 
-eettf |> 
+ttf |> 
   mutate_at(c("assembly_district", "district"), as.numeric) |> 
   arrange(assembly_district) |> 
   select("Assembly District" = assembly_district,
