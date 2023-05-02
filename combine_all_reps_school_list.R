@@ -11,7 +11,7 @@ city_limits <- st_read("../Shapefiles/Milwaukee/City Limits/citylimit.shp")
 
 geo_schools <- read_csv("data/geocoded_mke_schools.csv") %>%
   mutate(dpi_true_id = ifelse(dpi_true_id == "3619_0213",
-                              "8152_815 |> 2", dpi_true_id)) |> 
+                              "8152_8152", dpi_true_id)) |> 
   select(-student_count) %>%
   st_as_sf(., coords = c("long", "lat"), crs = 4326) %>%
   left_join(., make_mke_schools() %>%
