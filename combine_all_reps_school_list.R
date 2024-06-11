@@ -5,7 +5,7 @@ library(scales)
 
 # city limits
 
-city_limits <- st_read("../Shapefiles/Milwaukee/City Limits/citylimit.shp")
+city_limits <- st_read("../shapefiles/Milwaukee/City Limits/citylimit.shp")
 
 # School list geocoded
 
